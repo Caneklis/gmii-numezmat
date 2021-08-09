@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="cross" viewBox="0 0 21 20">
+<line x1="19.7384" y1="1.06066" x2="2.06072" y2="18.7383" stroke="currentColor" stroke-width="3"/>
+<line x1="19.2946" y1="18.7384" x2="1.61689" y2="1.06073" stroke="currentColor" stroke-width="3"/>
+</symbol><symbol id="icon-search" viewBox="0 0 11 11">
+<path d="M10.713 9.00862L9.27826 7.58621C9.75652 6.82759 10.0435 5.87931 10.0435 4.93103C10.0435 2.27586 7.74783 0 4.97391 0C2.29565 0 0 2.27586 0 4.93103C0 7.68103 2.29565 9.9569 4.97391 9.9569C5.93043 9.9569 6.88696 9.67241 7.55652 9.19828L8.9913 10.6207C9.18261 10.8103 9.46957 11 9.85217 11C10.1391 11 10.4261 10.8103 10.6174 10.6207C10.8087 10.431 11 10.1466 11 9.76724C11 9.57759 10.9043 9.19828 10.713 9.00862ZM8.22609 4.93103C8.22609 6.63793 6.7913 8.06034 5.06957 8.06034C3.34783 8.06034 1.81739 6.73276 1.81739 4.93103C1.81739 3.12931 3.25217 1.80172 4.97391 1.80172C6.69565 1.80172 8.22609 3.22414 8.22609 4.93103Z" fill="currentColor"/>
+</symbol><symbol id="menu" viewBox="0 0 25 19">
+<line x1="23.5" y1="1.5" x2="1.5" y2="1.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+<line x1="23.5" y1="9.5" x2="1.5" y2="9.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+<line x1="23.5" y1="17.5" x2="1.5" y2="17.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+</symbol></svg>

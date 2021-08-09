@@ -1,0 +1,97 @@
+.reference__wrapper {
+  @include wrapper;
+  padding-bottom: 60px;
+
+  @media ($desktop) {
+    display: grid;
+    grid-template-columns: 3.2fr 1fr;
+    padding-bottom: 170px;
+
+    &--aside-first {
+      grid-template-columns: 1fr 3.2fr;
+      padding-bottom: 145px;
+    }
+  }
+}
+
+.reference__title {
+  @include main-title;
+  grid-column: 1/-1;
+  margin-bottom: 57px;
+  padding-top: 30px;
+}
+
+.reference__list {
+  @include list-reset;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: flex-start;
+
+  @media ($tablet) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 28px;
+    row-gap: 45px;
+  }
+}
+
+.reference__item-link {
+  color: $links-color;
+  text-decoration: underline;
+
+  img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 270px;
+    object-fit: contain;
+  }
+
+  h2 {
+    margin: 0;
+    margin-top: 17px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    @media ($tablet) {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}
+
+.reference__aside {
+  @media ($desktop) {
+    &--right {
+      padding-left: 20%;
+    }
+  }
+}
+
+.reference__aside-title {
+  margin: 0;
+  margin-bottom: 45px;
+  font-family: $s-font;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 30px;
+  /* or 88% */
+}
+
+.reference__aside-list {
+  @include list-reset;
+}
+
+.reference__aside-item {
+  font-size: 15px;
+  line-height: 30px;
+
+  color: $links-color;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}

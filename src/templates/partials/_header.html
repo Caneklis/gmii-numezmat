@@ -1,0 +1,62 @@
+<header class="header">
+  <div class="header__wrapper">
+    <nav class="menu">
+      <div class="logo">
+        <a class="logo__link" href="#">
+          <img src="/images/logo.svg" width="131" height="64" alt="Логотип ГМИИ">
+          <div class="logo__text">отдел нумизматики</div>
+        </a>
+      </div>
+      <ul class="header__user-block">
+        <li class="header__user-block-item  header__user-block-item--search">
+          <form class="search-form" action="#" method="GET" id="search-form">
+            <div class="search-form__wrapper">
+              <input type="search" class="search-form__input">
+              <button class="search-form__btn  search-form__submit-btn" type="submit">
+                <svg class="search-form__icon" aria-hidden="true" width="11" height="11">
+                  <use href="images/sprite_auto.svg#icon-search"></use>
+                </svg>
+                <span class="visually-hidden">Найти</span>
+              </button>
+            </div>
+
+            <button class="search-form__btn  search-form__toggle-btn" type="button" aria-expanded="false"
+              aria-controls="search-form">
+              <svg class="search-form__icon" aria-hidden="true" width="11" height="11">
+                <use href="images/sprite_auto.svg#icon-search"></use>
+              </svg>
+              <span class="visually-hidden">Открыть форму поиска</span>
+            </button>
+          </form>
+        </li>
+        <li class="header__user-block-item  header__user-block-item--contrast"><a href="#">Aa</a></li>
+        <li class="header__user-block-item  header__user-block-item--lang"><a href="#">EN</a></li>
+      </ul>
+      <button class="menu__button" type="button" aria-expanded="false" aria-controls="menu-list">
+        <span class="visually-hidden">Открыть/закрыть меню</span>
+        <svg class="menu__icon" aria-hidden="true" width="25" height="16">
+          <use class="menu__icon-menu" href="images/sprite_auto.svg#menu"></use>
+          <use class="menu__icon-cross" href="images/sprite_auto.svg#cross"></use>
+        </svg>
+      </button>
+      <ul class="menu__list" id="menu-list">
+        <li class="menu__item"><a class="menu__link" href="#">Отдел</a></li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Коллекции</a>
+          <ul class="menu__sublist">
+            <li class="menu__subitem"><a class="menu__sublink" href="#">Монеты</a></li>
+            <li class="menu__subitem"><a class="menu__sublink" href="#">Медали</a></li>
+            <li class="menu__subitem"><a class="menu__sublink" href="#">Фалеристика</a></li>
+            <li class="menu__subitem"><a class="menu__sublink" href="#">Слепки</a></li>
+            <li class="menu__subitem"><a class="menu__sublink" href="#">Сфрагистика</a></li>
+            <li class="menu__subitem"><a class="menu__sublink" href="#">Бонистика</a></li>
+            <li class="menu__subitem"><a class="menu__sublink" href="#">Глиптика</a></li>
+          </ul>
+        </li>
+        <li class="menu__item"><a class="menu__link" href="#">Выставки</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Новости и события</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Благодарим</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

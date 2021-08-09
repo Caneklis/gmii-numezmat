@@ -1,0 +1,10 @@
+.page {
+  background-color: $bg-color;
+}
+
+.page__body {
+  // @include wrapper;
+  max-width: 1640px;
+  margin: 0 auto;
+  background-color: #fff;
+}

@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: $m-font;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.zoom {
+  display: none;
+
+  @media ($desktop) {
+    display: block;
+  }
+}
+
+// #flesh {
+//   background-color: #fff;
+// }
+
+#flesh {
+  position: relative;
+  margin: 0;
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+}
+
+#bone {
+  width: 100%;
+  margin: 0;
+  mask-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/40713/xray-machine.png");
+  mask-repeat: no-repeat;
+  mask-size: 480px;
+  cursor: none;
+}

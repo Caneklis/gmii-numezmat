@@ -1,0 +1,46 @@
+.breadcrumbs__wrapper {
+  @include wrapper;
+}
+
+.breadcrumbs {
+  margin-bottom: 40px;
+}
+
+.breadcrumbs__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs__item {
+  position: relative;
+  font-size: 15px;
+  line-height: 30px;
+  color: $links-color;
+
+  &::after {
+    content: "•";
+    margin: 0 10px;
+    color: $links-color;
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  &:last-child {
+    color: $b-color;
+
+    &::after {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      pointer-events: none;
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}

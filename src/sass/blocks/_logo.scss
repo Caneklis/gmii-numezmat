@@ -1,0 +1,32 @@
+.logo__link {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+  color: $s-color;
+  text-transform: uppercase;
+
+  @media ($tablet) {
+    img {
+      width: 113px;
+      height: auto;
+      margin-right: 12px;
+    }
+  }
+}
+
+.logo__text {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+    margin: 0;
+    padding-top: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    background: linear-gradient(89.34deg, #b5b5b5 13.12%, #eb9133 66.63%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

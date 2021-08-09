@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <title>Отдел нумизматики</title>
+    <meta name="description" content="Description index">
+    <link rel="stylesheet" media="all" href="css/style.min.css" />
+    <!-- BEGIN social data -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="">
+    <!-- END social data -->
+    <link rel="icon" href="favicon/favicon.ico"><!-- 32×32 -->
+    <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="manifest" href="favicon/manifest.webmanifest">
+  </head>
+  <body class="page__body">
+    <header class="header">
+      <div class="header__wrapper">
+        <nav class="menu">
+          <div class="logo">
+            <a class="logo__link" href="#">
+              <img src="/images/logo.svg" width="131" height="64" alt="Логотип ГМИИ">
+              <div class="logo__text">отдел нумизматики</div>
+            </a>
+          </div>
+          <ul class="header__user-block">
+            <li class="header__user-block-item  header__user-block-item--search">
+              <form class="search-form" action="#" method="GET" id="search-form">
+                <div class="search-form__wrapper">
+                  <input type="search" class="search-form__input">
+                  <button class="search-form__btn  search-form__submit-btn" type="submit">
+                    <svg class="search-form__icon" aria-hidden="true" width="11" height="11">
+                      <use href="images/sprite_auto.svg#icon-search"></use>
+                    </svg>
+                    <span class="visually-hidden">Найти</span>
+                  </button>
+                </div>
+                <button class="search-form__btn  search-form__toggle-btn" type="button" aria-expanded="false" aria-controls="search-form">
+                  <svg class="search-form__icon" aria-hidden="true" width="11" height="11">
+                    <use href="images/sprite_auto.svg#icon-search"></use>
+                  </svg>
+                  <span class="visually-hidden">Открыть форму поиска</span>
+                </button>
+              </form>
+            </li>
+            <li class="header__user-block-item  header__user-block-item--contrast"><a href="#">Aa</a></li>
+            <li class="header__user-block-item  header__user-block-item--lang"><a href="#">EN</a></li>
+          </ul>
+          <button class="menu__button" type="button" aria-expanded="false" aria-controls="menu-list">
+            <span class="visually-hidden">Открыть/закрыть меню</span>
+            <svg class="menu__icon" aria-hidden="true" width="25" height="16">
+              <use class="menu__icon-menu" href="images/sprite_auto.svg#menu"></use>
+              <use class="menu__icon-cross" href="images/sprite_auto.svg#cross"></use>
+            </svg>
+          </button>
+          <ul class="menu__list" id="menu-list">
+            <li class="menu__item"><a class="menu__link" href="#">Отдел</a></li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Коллекции</a>
+              <ul class="menu__sublist">
+                <li class="menu__subitem"><a class="menu__sublink" href="#">Монеты</a></li>
+                <li class="menu__subitem"><a class="menu__sublink" href="#">Медали</a></li>
+                <li class="menu__subitem"><a class="menu__sublink" href="#">Фалеристика</a></li>
+                <li class="menu__subitem"><a class="menu__sublink" href="#">Слепки</a></li>
+                <li class="menu__subitem"><a class="menu__sublink" href="#">Сфрагистика</a></li>
+                <li class="menu__subitem"><a class="menu__sublink" href="#">Бонистика</a></li>
+                <li class="menu__subitem"><a class="menu__sublink" href="#">Глиптика</a></li>
+              </ul>
+            </li>
+            <li class="menu__item"><a class="menu__link" href="#">Выставки</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Новости и события</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Благодарим</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- BEGIN content -->
+    <main class="page__main">
+      <section class="zoom">
+        <svg class="zoom__rect" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <rect width="100%" height="100%" fill="#ffffff" />
+        </svg>
+        <svg class="zoom__mask" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs>
+            <clipPath id="mask">
+              <circle id="mask-circle" cx="50%" cy="50%" r="17%" style="fill: #ffffff" />
+            </clipPath>
+          </defs>
+          <g clip-path="url(#mask)">
+            <rect width="100%" height="100%" fill="#ffffff" />
+            <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/zoom-bg.jpg" width="100%" height="100%" />
+          </g>
+          <circle id="circle-shadow" cx="50%" cy="50%" r="17%" style="stroke: #fff; fill: transparent; stroke-width: 5;" />
+        </svg>
+        <style>
+          .zoom
+          {
+            position: relative;
+            height: 593px;
+          }
+
+          .zoom__rect,
+          .zoom__mask
+          {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+
+        </style>
+      </section>
+      <section class="promo">
+        <div class="promo__wrapper">
+          <h1 class="promo__title">Отдел <br>нумизматики</h1>
+          <div class="promo__text">
+            <p>Нумизматическая коллекция ГМИИ имени А.С. Пушкина насчитывает почти два с половиной столетия собственной истории. В собрании более 200 000 предметов — монеты, медали, ордена, печати, денежные знаки, геммы.</p>
+          </div>
+          <div class="promo__media">
+            <img src="images/promo-img.jpg" loading="lazy" alt="">
+          </div>
+        </div>
+      </section>
+      <section class="events">
+        <div class="events__wrapper">
+          <div class="events__slider  swiper-container">
+            <div class="swiper-wrapper">
+              <div class="events__slide  swiper-slide">
+                <article class="events-item">
+                  <a href="#">
+                    <div class="events__item-pic">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="//via.placeholder.com/440x440">
+                        <img class="works-item__image" src="//via.placeholder.com/380x380" loading="lazy" alt="Описание фото">
+                      </picture>
+                      <div class="events__item-type">Конференция</div>
+                      <time class="events__item-date" datetime="2021-04-16">16 апреля 2021</time>
+                    </div>
+                  </a>
+                  <h2 class="events__item-text"><a href="#">Деньги в российской истории: производство, обращение, бытование</a></h2>
+                </article>
+              </div>
+              <div class="events__slide  swiper-slide">
+                <article class="events-item">
+                  <a href="#">
+                    <div class="events__item-pic">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="//via.placeholder.com/440x440">
+                        <img class="works-item__image" src="//via.placeholder.com/380x380" loading="lazy" alt="Описание фото">
+                      </picture>
+                      <div class="events__item-type">Конференция</div>
+                      <time class="events__item-date" datetime="2021-04-16">16 апреля 2021</time>
+                    </div>
+                  </a>
+                  <h2 class="events__item-text"><a href="#">Деньги в российской истории: производство, обращение, бытование</a></h2>
+                </article>
+              </div>
+              <div class="events__slide  swiper-slide">
+                <article class="events-item">
+                  <a href="#">
+                    <div class="events__item-pic">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="//via.placeholder.com/440x440">
+                        <img class="works-item__image" src="//via.placeholder.com/380x380" loading="lazy" alt="Описание фото">
+                      </picture>
+                      <div class="events__item-type">Конференция</div>
+                      <time class="events__item-date" datetime="2021-04-16">16 апреля 2021</time>
+                    </div>
+                  </a>
+                  <h2 class="events__item-text"><a href="#">Деньги в российской истории: производство, обращение, бытование</a></h2>
+                </article>
+              </div>
+              <div class="events__slide  swiper-slide">
+                <article class="events-item">
+                  <a href="#">
+                    <div class="events__item-pic">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="//via.placeholder.com/440x440">
+                        <img src="//via.placeholder.com/380x380" loading="lazy" alt="Описание фото">
+                      </picture>
+                      <div class="events__item-type">Конференция</div>
+                      <time class="events__item-date" datetime="2021-04-16">16 апреля 2021</time>
+                    </div>
+                  </a>
+                  <h2 class="events__item-text"><a href="#">Деньги в российской истории: производство, обращение, бытование</a></h2>
+                </article>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+      <section class="main-page-news">
+        <div class="main-page-news__wrapper">
+          <div class="main-page-news__aside">
+            <h2 class="main-page-news__aside-title">Новости и события</h2>
+            <ul class="main-page-news__aside-list">
+              <li class="main-page-news__aside-item"><a href="#">Выставки</a></li>
+              <li class="main-page-news__aside-item"><a href="#">Проекты</a></li>
+              <li class="main-page-news__aside-item"><a href="#">Лекции</a></li>
+              <li class="main-page-news__aside-item"><a href="#">Детские занятия</a></li>
+              <li class="main-page-news__aside-item"><a href="#">Конференции</a></li>
+              <li class="main-page-news__aside-item"><a href="#">Показать все события</a></li>
+            </ul>
+          </div>
+          <div class="main-page-news__slider  swiper-container">
+            <ul class="main-page-news__list  swiper-wrapper">
+              <li class="main-page-news__item  swiper-slide">
+                <article class="main-page-news__item-article">
+                  <a href="#">
+                    <div class="main-page-news__photo">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="//via.placeholder.com/350x270">
+                        <img src="//via.placeholder.com/260x200" loading="lazy" alt="Описание фото">
+                      </picture>
+                      <div class="main-page-news__item-info">
+                        <div class="main-page-news__item-type">Конференция</div>
+                        <time class="main-page-news__item-date" datetime="2021-04-16">16 апреля 2021</time>
+                      </div>
+                    </div>
+                    <h2 class="main-page-news__item-title">Деньги в российской истории: производство, обращение, бытование</h2>
+                  </a>
+                </article>
+              </li>
+              <li class="main-page-news__item  swiper-slide">
+                <article class="main-page-news__item-article">
+                  <a href="#">
+                    <div class="main-page-news__photo">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="//via.placeholder.com/350x270">
+                        <img src="//via.placeholder.com/260x200" loading="lazy" alt="Описание фото">
+                      </picture>
+                      <div class="main-page-news__item-info">
+                        <div class="main-page-news__item-type">Конференция</div>
+                        <time class="main-page-news__item-date" datetime="2021-04-16">16 апреля 2021</time>
+                      </div>
+                    </div>
+                    <h2 class="main-page-news__item-title">Деньги в российской истории: производство, обращение, бытование</h2>
+                  </a>
+                </article>
+              </li>
+              <li class="main-page-news__item  swiper-slide">
+                <article class="main-page-news__item-article">
+                  <a href="#">
+                    <div class="main-page-news__photo">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="//via.placeholder.com/350x270">
+                        <img src="//via.placeholder.com/260x200" loading="lazy" alt="Описание фото">
+                      </picture>
+                      <div class="main-page-news__item-info">
+                        <div class="main-page-news__item-type">Конференция</div>
+                        <time class="main-page-news__item-date" datetime="2021-04-16">16 апреля 2021</time>
+                      </div>
+                    </div>
+                    <h2 class="main-page-news__item-title">Деньги в российской истории: производство, обращение, бытование</h2>
+                  </a>
+                </article>
+              </li>
+              <li class="main-page-news__item  swiper-slide">
+                <article class="main-page-news__item-article">
+                  <a href="#">
+                    <div class="main-page-news__photo">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="//via.placeholder.com/350x270">
+                        <img src="//via.placeholder.com/260x200" loading="lazy" alt="Описание фото">
+                      </picture>
+                      <div class="main-page-news__item-info">
+                        <div class="main-page-news__item-type">Конференция</div>
+                        <time class="main-page-news__item-date" datetime="2021-04-16">16 апреля 2021</time>
+                      </div>
+                    </div>
+                    <h2 class="main-page-news__item-title">Деньги в российской истории: производство, обращение, бытование</h2>
+                  </a>
+                </article>
+              </li>
+              <li class="main-page-news__item  swiper-slide">
+                <article class="main-page-news__item-article">
+                  <a href="#">
+                    <div class="main-page-news__photo">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="//via.placeholder.com/350x270">
+                        <img src="//via.placeholder.com/260x200" loading="lazy" alt="Описание фото">
+                      </picture>
+                      <div class="main-page-news__item-info">
+                        <div class="main-page-news__item-type">Конференция</div>
+                        <time class="main-page-news__item-date" datetime="2021-04-16">16 апреля 2021</time>
+                      </div>
+                    </div>
+                    <h2 class="main-page-news__item-title">Деньги в российской истории: производство, обращение, бытование</h2>
+                  </a>
+                </article>
+              </li>
+              <li class="main-page-news__item  swiper-slide">
+                <article class="main-page-news__item-article">
+                  <a href="#">
+                    <div class="main-page-news__photo">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="//via.placeholder.com/350x270">
+                        <img src="//via.placeholder.com/260x200" loading="lazy" alt="Описание фото">
+                      </picture>
+                      <div class="main-page-news__item-info">
+                        <div class="main-page-news__item-type">Конференция</div>
+                        <time class="main-page-news__item-date" datetime="2021-04-16">16 апреля 2021</time>
+                      </div>
+                    </div>
+                    <h2 class="main-page-news__item-title">Деньги в российской истории: производство, обращение, бытование</h2>
+                  </a>
+                </article>
+              </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- END content -->
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <ul class="footer__partners-list">
+          <li class="footer__partner-item">
+            <p>Партнер отдела нумизматики</p>
+            <a href="#"><img src="/images/unicreditbank-logo.svg" loading="lazy" width="154" height="20" alt="Логотип партнера - название партнера"></a>
+          </li>
+          <li class="footer__partner-item">
+            <p>Еще один пратнер отдела нумизматики</p>
+            <a href="#"><img src="/images/unicreditbank-logo.svg" loading="lazy" width="154" height="20" alt="Логотип партнера - название партнера"></a>
+          </li>
+        </ul>
+        <ul class="footer__list">
+          <li class="footer__list-item"><a href="#">Политика сбора cookies</a></li>
+          <li class="footer__list-item"><a href="#">Правила использования материалов сайта</a></li>
+          <li class="footer__list-item"><a href="#">Форма обратной связи</a></li>
+          <li class="footer__list-item"><a href="#">Подписка на новости музея</a></li>
+        </ul>
+        <div class="footer__copyright">
+          <p>© Государственный музей изобразительных искусств имени А.С. Пушкина</p>
+          <a href="www.coins-and-medals.ru" target="_blank" rel="noopener">Старая версия сайта www.coins-and-medals.ru</a>
+        </div>
+      </div>
+    </footer>
+    <!-- BEGIN scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/main.min.js"></script>
+    <!-- END scripts -->
+  </body>
+</html>

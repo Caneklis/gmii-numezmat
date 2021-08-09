@@ -1,0 +1,22 @@
+@mixin wrapper {
+  width: 100%;
+  margin: 0 auto;
+  // padding: 0 5% 0 5.5%;
+  padding: 0 5.5% 0 6%;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin main-title {
+  margin: 0;
+  font-family: $s-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 120%;
+  color: #2c2929;
+}

@@ -1,0 +1,7 @@
+.textpage__wrapper {
+  @include wrapper;
+}
+
+.textpage__title {
+  @include main-title;
+}

@@ -1,0 +1,21 @@
+@import "../../node_modules/normalize.css/normalize";
+@import "../../node_modules/swiper/swiper-bundle";
+@import "global/fonts";
+@import "global/variables";
+@import "global/mixins";
+@import "global/reboot";
+@import "global/scafoldings";
+
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/page";
+@import "blocks/search-form";
+@import "blocks/logo";
+@import "blocks/menu";
+@import "blocks/promo";
+@import "blocks/events";
+@import "blocks/main-page-news";
+@import "blocks/reference";
+@import "blocks/textpage";
+@import "blocks/breadcrumbs";
+@import "blocks/column-content";

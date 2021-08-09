@@ -1,0 +1,22 @@
+.events__slider {
+  @include wrapper;
+  padding-top: 17px;
+  padding-bottom: 20px;
+
+  @media ($tablet) {
+    padding-top: 120px;
+    padding-bottom: 50px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 9px;
+    height: 9px;
+    margin: 0 5px !important;
+    background-color: #c4c4c4;
+    opacity: 1;
+
+    &-active {
+      background-color: #e7a45e;
+    }
+  }
+}

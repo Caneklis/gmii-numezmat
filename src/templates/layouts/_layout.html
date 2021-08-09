@@ -1,0 +1,41 @@
+{% import "partials/_mixins.html" as mixins %}
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Primary Meta Tags -->
+	<title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
+	<meta name="description" content="{% if description %}{{ description }}{% else %}Description{% endif %}">
+	<link rel="stylesheet" media="all" href="{{ base_path }}css/style.min.css" />
+	<!-- BEGIN social data -->
+	{% include "../partials/_media-tags.html" %}
+	<!-- END social data -->
+	<link rel="icon" href="{{ base_path }}favicon/favicon.ico"><!-- 32×32 -->
+	<link rel="icon" href="{{ base_path }}favicon/icon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="{{ base_path }}favicon/apple-touch-icon.png"><!-- 180×180 -->
+	<link rel="manifest" href="{{ base_path }}favicon/manifest.webmanifest">
+</head>
+
+<body class="page__body">
+	{% include "../partials/_header.html" %}
+
+	<!-- BEGIN content -->
+	<main class="page__main">
+		{% block content %}{% endblock %}
+	</main>
+	<!-- END content -->
+
+	{% include "../partials/_footer.html" %}
+
+	<!-- BEGIN scripts -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="{{ base_path }}js/main.min.js"></script>
+	<!-- END scripts -->
+
+</body>
+
+</html>

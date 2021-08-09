@@ -1,0 +1,50 @@
+---
+title: Справочные материалы
+description: Description test
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<section class="reference">
+  <div class="reference__wrapper">
+    <h1 class="reference__title">{{ title }}</h1>
+    <ul class="reference__list">
+      {% for item in range(0, 2) -%}
+      <li class="reference__item">
+        <a href="#" class="reference__item-link">
+          <img src="//via.placeholder.com/350x270" loading="lazy" width="350" height="270" alt="Описание фото">
+          <h2>Топографический указатель</h2>
+        </a>
+      </li>
+      <li class="reference__item">
+        <a href="#" class="reference__item-link">
+          <img src="//via.placeholder.com/350x270" loading="lazy" width="350" height="270" alt="Описание фото">
+          <h2>длинное название
+            «ВЛОЖЕННОЙ СТРАНИЦЫ»</h2>
+        </a>
+      </li>
+      <li class="reference__item">
+        <a href="#" class="reference__item-link">
+          <img src="//via.placeholder.com/350x270" loading="lazy" width="350" height="270" alt="Описание фото">
+          <h2>Топографический указатель</h2>
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+    <div class="reference__aside  reference__aside--right">
+      <h2 class="reference__aside-title">Индексы <br>
+        и справочники</h2>
+      <ul class="reference__aside-list">
+        <li class="reference__aside-item"><a href="#">Топографический указатель</a></li>
+        <li class="reference__aside-item"><a href="#">Предметный указатель</a></li>
+        <li class="reference__aside-item"><a href="#">Материалы</a></li>
+        <li class="reference__aside-item"><a href="#">Происхождение</a></li>
+        <li class="reference__aside-item"><a href="#">События</a></li>
+        <li class="reference__aside-item"><a href="#">Легенды</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

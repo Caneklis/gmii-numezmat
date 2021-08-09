@@ -1,0 +1,39 @@
+.column-content {
+  width: 100%;
+  max-width: 485px;
+
+  .swiper-wrapper {
+    align-items: center;
+  }
+}
+
+.column-content__image {
+  margin: 0;
+}
+
+.column-content__image-wrapper {
+  background-color: $bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  @media ($tablet) {
+    padding: 57px 20px;
+  }
+}
+
+.column-content__image-description {
+  padding-top: 21px;
+
+  p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  a {
+    color: $links-color;
+    text-decoration: underline;
+  }
+}
