@@ -1,0 +1,110 @@
+---
+title: Новости и события
+description: Description test
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<section class="news-page">
+  <div class="news-page__wrapper">
+    <h1 class="news-page__title">{{title}}</h1>
+    <ul class="news-page__head-list">
+      {% for item in range(0, 2) -%}
+      <li class="news-page__head-list-item">
+        <a href="#">
+          <img src="//via.placeholder.com/340x260" loading="lazy" width="340" height="260" alt="Описание фото">
+          <p>детские занятия «КЛИ Нумизматика»</p>
+        </a>
+      </li>
+      <li class="news-page__head-list-item">
+        <a href="#">
+          <img src="//via.placeholder.com/340x260" loading="lazy" width="340" height="260" alt="Описание фото">
+          <p>Лекция к.и.н. С.А. Коваленко. Монета и варварские народы в античности</p>
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+
+    <div class="news-page__content">
+      <div class="news-page__list-filter  filter">
+        <ul class="filter__list">
+          <li class="filter__item"><a class="filter__item-btn" href="#">Выставка</a></li>
+          <li class="filter__item"><a class="filter__item-btn" href="#">Проекты</a></li>
+          <li class="filter__item"><a class="filter__item-btn  filter__item-btn--active" href="#">Лекции</a></li>
+          <li class="filter__item"><a class="filter__item-btn" href="#">Детям</a></li>
+          <li class="filter__item"><a class="filter__item-btn" href="#">Конференции</a></li>
+          <li class="filter__item"><a class="filter__item-btn" href="#">Публикации</a></li>
+          <li class="filter__item"><a class="filter__item-btn" href="#">Другое</a></li>
+        </ul>
+      </div>
+      <ul class="news-page__news-list">
+        {% for item in range(0, 2) -%}
+        <li class="news-page__news-item">
+          <article class="news-page__news-article">
+            <a class="news-page__pic-link" href="#"><img src="//via.placeholder.com/340x260" loading="lazy" width="340"
+                height="260" alt="Описание фото"></a>
+            <div class="news-page__article-info">
+              <time class="news-page__article-date" datetime="2021-04-16">16 апреля 2021</time>
+              <div class="news-page__article-type">Лекция</div>
+            </div>
+            <div class="news-page__article-lead">
+              <h2><a href="#">История в монетах — монеты в истории</a></h2>
+              <p>Циклы лекций, объединенные в рамках рубрики «Трибуна ученого», адресованы прежде всего слушателям,
+                желающим дополнить и углубить свои знания об изобразительном искусстве и культуре определенного периода,
+                получить наиболее полное представление о взгляде ведущих современных ученых на проблемы, актуальные для
+                отечественного и зарубежного искусствознания. </p>
+            </div>
+          </article>
+        </li>
+        <li class="news-page__news-item">
+          <article class="news-page__news-article">
+            <a class="news-page__pic-link" href="#"><img src="//via.placeholder.com/340x260" loading="lazy" width="340"
+                height="260" alt="Описание фото"></a>
+            <div class="news-page__article-info">
+              <time class="news-page__article-date" datetime="2021-04-16">16 апреля 2021</time>
+              <div class="news-page__article-type">Конференция</div>
+              <a class="news-page__article-btn" href="#">Купить билет</a>
+            </div>
+            <div class="news-page__article-lead">
+              <h2><a href="#">История в монетах — монеты в истории</a></h2>
+              <p>Циклы лекций, объединенные в рамках рубрики «Трибуна ученого», адресованы прежде всего слушателям,
+                желающим дополнить и углубить свои знания об изобразительном искусстве и культуре определенного периода,
+                получить наиболее полное представление о взгляде ведущих современных ученых на проблемы, актуальные для
+                отечественного и зарубежного искусствознания. </p>
+            </div>
+          </article>
+        </li>
+        {%- endfor %}
+      </ul>
+
+      <div class="news-page__sidebar">
+        <div class="subscribe">
+          <h2 class="subscribe__title">Подписка на новости</h2>
+          <form class="subscribe__form" action="3" method="POST">
+            <label for="email" class="visually-hidden"></label>
+            <input class="subscribe__input" id="email" name="email" type="email" require placeholder="e-mail">
+            <input class="subscribe__form-checkbox  visually-hidden" id="term1" name="term1" type="checkbox" require>
+            <label for="term1" class="subscribe__form-label">Я согласен(на) с <a href="#">условиями информационной
+                рассылки</a>
+            </label>
+            <input class="subscribe__form-checkbox  visually-hidden" id="term2" name="term2" type="checkbox" require>
+            <label for="term2" class="subscribe__form-label">Я согласен(на) с Политикой конфиденциальности и обработки
+              персональных данных</label>
+            <button class="subscribe__form-btn" type="submit">отправить</button>
+          </form>
+        </div>
+
+        <ul class="years-list">
+          {% for item in range(0, 14) -%}
+          <li class="years-list__item">
+            <a href="#">201{{item}}</a>
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

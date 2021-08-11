@@ -1,0 +1,73 @@
+.main-page-collection__wrapper {
+  @include wrapper;
+
+  @media ($tablet) {
+    display: grid;
+    grid-template-columns: 1fr minmax(min-content, 930px);
+    column-gap: 60px;
+    align-items: flex-start;
+  }
+}
+
+.main-page-collection__title {
+  margin: 0;
+  font-family: $s-font;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+
+  color: #ffffff;
+
+  @media ($tablet) {
+    color: $b-color;
+    font-size: 34px;
+    line-height: 30px;
+  }
+}
+
+.main-page-collection__item-of-the-month {
+  display: none;
+
+  @media ($tablet) {
+    display: block;
+  }
+}
+
+.main-page-collection__item-pic {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.main-page-collection__item-pic-description {
+  order: -1;
+  p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 30px;
+
+    a {
+      color: $links-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+.main-page-collection__favorites-slider {
+  background-color: #026163;
+
+  .swiper-slide {
+    margin-top: -100px;
+  }
+
+  .swiper-slide-next,
+  .swiper-slide-prev {
+    margin-top: -50px !important;
+  }
+
+  .swiper-slide-active {
+    margin-top: 50px;
+  }
+}

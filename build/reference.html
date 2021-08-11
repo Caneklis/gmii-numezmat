@@ -39,23 +39,25 @@
           </div>
           <ul class="header__user-block">
             <li class="header__user-block-item  header__user-block-item--search">
-              <form class="search-form" action="#" method="GET" id="search-form">
-                <div class="search-form__wrapper">
-                  <input type="search" class="search-form__input">
-                  <button class="search-form__btn  search-form__submit-btn" type="submit">
-                    <svg class="search-form__icon" aria-hidden="true" width="11" height="11">
-                      <use href="images/sprite_auto.svg#icon-search"></use>
-                    </svg>
-                    <span class="visually-hidden">Найти</span>
-                  </button>
-                </div>
+              <div class="search-form">
+                <form class="search-form__form" action="" method="GET" id="search-form">
+                  <div class="search-form__wrapper">
+                    <input type="text" class="search-form__input">
+                    <button class="search-form__btn  search-form__submit-btn" type="submit">
+                      <svg class="search-form__icon" aria-hidden="true" width="11" height="11">
+                        <use href="images/sprite_auto.svg#icon-search"></use>
+                      </svg>
+                      <span class="visually-hidden">Найти</span>
+                    </button>
+                  </div>
+                </form>
                 <button class="search-form__btn  search-form__toggle-btn" type="button" aria-expanded="false" aria-controls="search-form">
                   <svg class="search-form__icon" aria-hidden="true" width="11" height="11">
                     <use href="images/sprite_auto.svg#icon-search"></use>
                   </svg>
                   <span class="visually-hidden">Открыть форму поиска</span>
                 </button>
-              </form>
+              </div>
             </li>
             <li class="header__user-block-item  header__user-block-item--contrast"><a href="#">Aa</a></li>
             <li class="header__user-block-item  header__user-block-item--lang"><a href="#">EN</a></li>

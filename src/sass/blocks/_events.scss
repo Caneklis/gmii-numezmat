@@ -1,11 +1,26 @@
-.events__slider {
+.events__wrapper {
   @include wrapper;
+  position: relative;
+
+  @media (max-width: 767px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+    }
+  }
+}
+
+.events__slider {
   padding-top: 17px;
   padding-bottom: 20px;
 
   @media ($tablet) {
     padding-top: 120px;
     padding-bottom: 50px;
+  }
+
+  @media ($desktop) {
+    padding-bottom: 106px;
   }
 
   .swiper-pagination-bullet {
@@ -18,5 +33,112 @@
     &-active {
       background-color: #e7a45e;
     }
+  }
+
+  .swiper-pagination {
+    @media ($tablet) {
+      display: none;
+    }
+  }
+}
+
+.events__list {
+  @include list-reset;
+}
+
+.events__article-link {
+  @media ($desktop) {
+    &:hover {
+      .events__item-pic-description {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.events__item-pic {
+  @media ($desktop) {
+    height: 440px;
+    display: grid;
+    grid-template: "container";
+    place-items: center;
+    place-content: center;
+    overflow: hidden;
+
+    > * {
+      grid-area: container;
+      // max-width: 1000px;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+
+    @media ($tablet) {
+      grid-area: container;
+      position: relative;
+      margin: auto;
+      z-index: -1;
+      place-self: center;
+      align-self: flex-start;
+    }
+  }
+}
+
+.events__item-pic-description {
+  @media ($desktop) {
+    grid-area: container;
+    position: relative;
+    z-index: 2;
+    place-self: stretch;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 34px;
+    padding-left: 8.5%;
+    background-color: $fade-color;
+    transition: all 0.3s ease;
+  }
+}
+
+.events__item-type {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: $s-font;
+  font-size: 30px;
+  line-height: 35px;
+  color: #2c2929;
+
+  @media ($desktop) {
+    color: #fff;
+  }
+}
+
+.events__item-date {
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #2c2929;
+
+  @media ($desktop) {
+    color: #fff;
+  }
+}
+
+.events__item-text {
+  padding-right: 20px;
+  color: $links-color;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
   }
 }

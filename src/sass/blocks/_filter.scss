@@ -1,0 +1,32 @@
+.filter__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+}
+
+.filter__item {
+  flex-basis: 131px;
+  flex-shrink: 0;
+  display: flex;
+}
+
+.filter__item-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 15px;
+  line-height: 30px;
+  border: 1px solid #d7b8a8;
+  border-radius: 3px;
+  color: $b-color;
+  transition: all 0.3s ease;
+
+  &--active {
+    font-weight: 700;
+    color: #fff;
+    background-color: #e7a45e;
+    border-color: #e7a45e;
+  }
+}

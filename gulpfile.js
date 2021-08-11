@@ -119,7 +119,7 @@ const server = () => {
   });
 
   watch("src/sass/**/*.{scss,sass}", series(styles));
-  watch("src/templates/**/[^_]*.html", series("nunjucks", refresh));
+  watch("src/templates/**/*.html", series("nunjucks", refresh));
   watch("src/js/**/*.{js,json}", series(js, refresh));
 };
 

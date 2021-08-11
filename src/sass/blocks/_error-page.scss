@@ -1,0 +1,42 @@
+.error-page {
+}
+
+.error-page__wrapper {
+  @include wrapper;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/404-bg.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  h1,
+  p {
+    margin: 0;
+    font-family: $s-font;
+    font-size: 30px;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+  }
+
+  a {
+    margin-top: 45px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+
+    /* Цвет ссылки в тексте */
+
+    color: #b15a25;
+  }
+}

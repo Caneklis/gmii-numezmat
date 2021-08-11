@@ -39,23 +39,25 @@
           </div>
           <ul class="header__user-block">
             <li class="header__user-block-item  header__user-block-item--search">
-              <form class="search-form" action="#" method="GET" id="search-form">
-                <div class="search-form__wrapper">
-                  <input type="search" class="search-form__input">
-                  <button class="search-form__btn  search-form__submit-btn" type="submit">
-                    <svg class="search-form__icon" aria-hidden="true" width="11" height="11">
-                      <use href="images/sprite_auto.svg#icon-search"></use>
-                    </svg>
-                    <span class="visually-hidden">Найти</span>
-                  </button>
-                </div>
+              <div class="search-form">
+                <form class="search-form__form" action="" method="GET" id="search-form">
+                  <div class="search-form__wrapper">
+                    <input type="text" class="search-form__input">
+                    <button class="search-form__btn  search-form__submit-btn" type="submit">
+                      <svg class="search-form__icon" aria-hidden="true" width="11" height="11">
+                        <use href="images/sprite_auto.svg#icon-search"></use>
+                      </svg>
+                      <span class="visually-hidden">Найти</span>
+                    </button>
+                  </div>
+                </form>
                 <button class="search-form__btn  search-form__toggle-btn" type="button" aria-expanded="false" aria-controls="search-form">
                   <svg class="search-form__icon" aria-hidden="true" width="11" height="11">
                     <use href="images/sprite_auto.svg#icon-search"></use>
                   </svg>
                   <span class="visually-hidden">Открыть форму поиска</span>
                 </button>
-              </form>
+              </div>
             </li>
             <li class="header__user-block-item  header__user-block-item--contrast"><a href="#">Aa</a></li>
             <li class="header__user-block-item  header__user-block-item--lang"><a href="#">EN</a></li>
@@ -102,7 +104,9 @@
       </div>
       <section class="textpage">
         <div class="textpage__wrapper">
-          <h1 class="textpage__title">«Памятные древности свеев»<br> Нумизматическая коллекция Элиаса<br> Бреннера и Павла Григорьевича Демидова (h1)</h1>
+          <div class="textpage__head">
+            <h1 class="textpage__title">«Памятные древности свеев»<br> Нумизматическая коллекция Элиаса<br> Бреннера и Павла Григорьевича Демидова (h1)</h1>
+          </div>
           <div class="textpage__content">
             <div class="textpage__left-col">
               <div class="column-content">
@@ -111,44 +115,38 @@
                     <img src="//via.placeholder.com/281x366" loading="lazy" width="281" height="366" alt="Описание фото">
                   </div>
                   <figcaption class="column-content__image-description">
-                    <p>Наградная медаль за сражение при Лесной 28 сентября(9 октября) 1708 года. Происходит из <a href="#">коллекции великого князя Георгия Михайловича</a></p>
-                  </figcaption>
-                </figure>
-                <figure class="column-content__image">
-                  <div class="column-content__image-wrapper">
-                    <img src="//via.placeholder.com/366x281" loading="lazy" width="366" height="281" alt="Описание фото">
-                  </div>
-                  <figcaption class="column-content__image-description">
-                    <p>Наградная медаль за сражение при Лесной 28 сентября(9 октября) 1708 года. Происходит из коллекции великого князя Георгия Михайловича</p>
+                    <p>Наградная медаль за сражение при Лесной 28 сентября (9 октября) 1708 года. Происходит из <a href="#">коллекции великого князя Георгия Михайловича</a></p>
                   </figcaption>
                 </figure>
               </div>
               <div class="column-content">
                 <!-- Swiper -->
-                <div class="swiper-container gallery-top">
-                  <div class="swiper-wrapper">
-                    <figure class="column-content__image  swiper-slide">
-                      <div class="column-content__image-wrapper">
-                        <img src="//via.placeholder.com/281x366" loading="lazy" width="281" height="366" alt="Описание фото">
-                      </div>
-                    </figure>
-                    <figure class="column-content__image  swiper-slide">
-                      <div class="column-content__image-wrapper">
-                        <img src="//via.placeholder.com/366x281" loading="lazy" width="366" height="281" alt="Описание фото">
-                      </div>
-                    </figure>
-                    <figure class="column-content__image  swiper-slide">
-                      <div class="column-content__image-wrapper">
-                        <img src="//via.placeholder.com/281x366" loading="lazy" width="281" height="366" alt="Описание фото">
-                      </div>
-                    </figure>
-                    <figure class="column-content__image  swiper-slide">
-                      <div class="column-content__image-wrapper">
-                        <img src="//via.placeholder.com/366x281" loading="lazy" width="366" height="281" alt="Описание фото">
-                      </div>
-                    </figure>
+                <div class="column-content__slider">
+                  <div class="swiper-container gallery-top">
+                    <div class="swiper-wrapper">
+                      <figure class="column-content__image  swiper-slide">
+                        <div class="column-content__image-wrapper">
+                          <img src="//via.placeholder.com/281x366" loading="lazy" width="281" height="366" alt="Описание фото">
+                        </div>
+                      </figure>
+                      <figure class="column-content__image  swiper-slide">
+                        <div class="column-content__image-wrapper">
+                          <img src="//via.placeholder.com/366x281" loading="lazy" width="366" height="281" alt="Описание фото">
+                        </div>
+                      </figure>
+                      <figure class="column-content__image  swiper-slide">
+                        <div class="column-content__image-wrapper">
+                          <img src="//via.placeholder.com/281x366" loading="lazy" width="281" height="366" alt="Описание фото">
+                        </div>
+                      </figure>
+                      <figure class="column-content__image  swiper-slide">
+                        <div class="column-content__image-wrapper">
+                          <img src="//via.placeholder.com/366x281" loading="lazy" width="366" height="281" alt="Описание фото">
+                        </div>
+                      </figure>
+                    </div>
+                    <div class="swiper-pagination"></div>
                   </div>
-                  <div class="swiper-pagination"></div>
                   <!-- Add Arrows -->
                   <div class="swiper-button-next"></div>
                   <div class="swiper-button-prev"></div>
@@ -156,19 +154,33 @@
                 <div class="swiper-container gallery-thumbs">
                   <div class="swiper-wrapper">
                     <div class="column-content__image-description  swiper-slide">
-                      <p>Наградная медаль за сражение при Лесной 28 сентября(9 октября) 1708 года. Происходит из коллекции великого князя Георгия Михайловича</p>
+                      <p>Наградная медаль за сражение при Лесной 28 сентября(9 октября) 1708 года. Происходит из <a href="#">коллекции великого князя Георгия Михайловича</a></p>
                     </div>
                     <div class="column-content__image-description  swiper-slide">
-                      <p>Наградная медаль за сражение при Лесной 28 сентября(9 октября) 1708 года. Происходит из коллекции великого князя Георгия Михайловича</p>
+                      <p>Наградная медаль за сражение при Лесной 28 сентября(9 октября) 1708 года. Происходит из <a href="#">коллекции великого князя Георгия Михайловича</a></p>
                     </div>
                     <div class="column-content__image-description  swiper-slide">
-                      <p>Наградная медаль за сражение при Лесной 28 сентября(9 октября) 1708 года. Происходит из коллекции великого князя Георгия Михайловича</p>
+                      <p>Наградная медаль за сражение при Лесной 28 сентября(9 октября) 1708 года. Происходит из <a href="#">коллекции великого князя Георгия Михайловича</a></p>
                     </div>
                     <div class="column-content__image-description  swiper-slide">
-                      <p>Наградная медаль за сражение при Лесной 28 сентября(9 октября) 1708 года. Происходит из коллекции великого князя Георгия Михайловича</p>
+                      <p>Наградная медаль за сражение при Лесной 28 сентября(9 октября) 1708 года. Происходит из <a href="#">коллекции великого князя Георгия Михайловича</a></p>
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="social-share">
+                <p>Поделиться в соцсетях</p>
+                <script src="https://yastatic.net/share2/share.js"></script>
+                <div class="ya-share2" data-curtain data-shape="round" data-color-scheme="blackwhite" data-services="vkontakte,facebook,odnoklassniki,telegram,twitter"></div>
+              </div>
+              <div class="download">
+                <p>Скачать файлы</p>
+                <ul class="download__list">
+                  <li class="download__item"><a href="#" download="">Федеральный закон от 21.07.2014 N 256-ФЗ</a></li>
+                  <li class="download__item"><a href="#" download="">Приказ Министерства культуры РФ от 20 февраля 2015 г. N 277 </a></li>
+                  <li class="download__item"><a href="#" download="">Федеральный закон от 28 декабря 2013 г. N 426-ФЗ</a>
+                  </li>
+                </ul>
               </div>
             </div>
             <div class="textpage__right-col">
@@ -189,6 +201,79 @@
               <p>Интерес Элиаса Бреннера к монетам и медалям не угасал. Он стал опытным нумизматом-медиевистом. Его коллекция была небольшой, но очень репрезентативной и в полной мере отражала историю Швеции от конца X до XVII века. По сути дела, ученому удалось собрать костяк шведской нумизматики. Он обратился к королю с прошением о привилегии издать труд о шведских монетах, и 16 мая 1686 года его прошение было удовлетворено. В 1691 году трактат “Thesaurus nummorum Sveo-Gothicorum” («Сокровищница свее-гётских монет») был напечатан на шведском и латинском языках. Это издание – целая страница в истории нумизматической науки.</p>
               <h3>Подзаголовок статьи (h3)</h3>
               <p>Интерес Элиаса Бреннера к монетам и медалям не угасал. Он стал опытным нумизматом-медиевистом. Его коллекция была небольшой, но очень репрезентативной и в полной мере отражала историю Швеции от конца X до XVII века. По сути дела, ученому удалось собрать костяк шведской нумизматики. Он обратился к королю с прошением о привилегии издать труд о шведских монетах, и 16 мая 1686 года его прошение было удовлетворено. В 1691 году трактат “Thesaurus nummorum Sveo-Gothicorum” («Сокровищница свее-гётских монет») был напечатан на шведском и латинском языках. Это издание – целая страница в истории нумизматической науки.</p>
+              <table>
+                <tr>
+                  <th>Столбец 1</th>
+                  <th>Столбец 2</th>
+                  <th>Столбец 3</th>
+                  <th>Столбец 4</th>
+                  <th>Столбец 5</th>
+                </tr>
+                <tr>
+                  <td>ячейка</td>
+                  <td>Значение строки может быть длинным</td>
+                  <td>93.9</td>
+                  <td>64.0</td>
+                  <td>64.0</td>
+                </tr>
+                <tr>
+                  <td>ячейка</td>
+                  <td>Значение строки может быть длинным</td>
+                  <td>93.9</td>
+                  <td>64.0</td>
+                  <td>64.0</td>
+                </tr>
+                <tr>
+                  <td>ячейка</td>
+                  <td>Значение строки может быть длинным</td>
+                  <td>93.9</td>
+                  <td>64.0</td>
+                  <td>64.0</td>
+                </tr>
+                <tr>
+                  <td>ячейка</td>
+                  <td>Значение строки может быть длинным</td>
+                  <td>93.9</td>
+                  <td>64.0</td>
+                  <td>64.0</td>
+                </tr>
+                <tr>
+                  <td>ячейка</td>
+                  <td>Значение строки может быть длинным</td>
+                  <td>93.9</td>
+                  <td>64.0</td>
+                  <td>64.0</td>
+                </tr>
+                <tr>
+                  <td>ячейка</td>
+                  <td>Значение строки может быть длинным</td>
+                  <td>93.9</td>
+                  <td>64.0</td>
+                  <td>64.0</td>
+                </tr>
+                <tr>
+                  <td>ячейка</td>
+                  <td>Значение строки может быть длинным</td>
+                  <td>93.9</td>
+                  <td>64.0</td>
+                  <td>64.0</td>
+                </tr>
+                <tr>
+                  <td>ячейка</td>
+                  <td>Значение строки может быть длинным</td>
+                  <td>93.9</td>
+                  <td>64.0</td>
+                  <td>64.0</td>
+                </tr>
+                <tr>
+                  <td>ячейка</td>
+                  <td>Значение строки может быть длинным</td>
+                  <td>93.9</td>
+                  <td>64.0</td>
+                  <td>64.0</td>
+                </tr>
+              </table>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/59yVwVhAQgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
         </div>

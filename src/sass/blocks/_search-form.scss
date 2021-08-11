@@ -1,24 +1,21 @@
 .search-form {
   position: relative;
-  height: 40px;
 
   &--open {
-    .search-form__wrapper {
+    .search-form__form {
       background-color: #fff;
       height: 100%;
       display: flex;
       align-items: center;
-      padding-right: 17px;
       opacity: 1;
       position: absolute;
       right: 0;
       bottom: 50%;
       margin-bottom: -20px;
-      border-color: #fea13a;
+      border: 1px solid #fea13a;
 
       @media ($tablet) {
         position: static;
-        padding-right: 10px;
         margin-bottom: 0;
       }
 
@@ -29,10 +26,20 @@
   }
 }
 
-.search-form__wrapper {
-  opacity: 0;
+.search-form__form {
   display: none;
-  border: 1px solid transparent;
+}
+
+.search-form__wrapper {
+  padding-right: 17px;
+  display: flex;
+  width: 100%;
+  position: relative;
+  // border: 1px solid transparent;
+
+  @media ($tablet) {
+    padding-right: 10px;
+  }
 }
 
 .search-form__toggle-btn {
@@ -75,6 +82,7 @@
 }
 
 .search-form__submit-btn {
+  position: relative;
   color: #b65a23;
 }
 

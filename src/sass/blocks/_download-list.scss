@@ -1,0 +1,39 @@
+.download {
+  p {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.download__list {
+  @include list-reset;
+  max-width: 375px;
+}
+
+.download__item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 40px;
+  font-size: 15px;
+  line-height: 30px;
+
+  color: #b15a25;
+
+  &::before {
+    content: url("../images/sprite/icon-download.svg");
+    position: absolute;
+    left: 2px;
+    top: 3px;
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}

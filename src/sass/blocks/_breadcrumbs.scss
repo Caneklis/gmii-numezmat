@@ -3,6 +3,7 @@
 }
 
 .breadcrumbs {
+  margin-top: 35px;
   margin-bottom: 40px;
 }
 
@@ -10,13 +11,19 @@
   @include list-reset;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .breadcrumbs__item {
   position: relative;
-  font-size: 15px;
-  line-height: 30px;
+  font-size: 12px;
+  line-height: 22px;
   color: $links-color;
+
+  @media ($tablet) {
+    font-size: 15px;
+    line-height: 30px;
+  }
 
   &::after {
     content: "•";

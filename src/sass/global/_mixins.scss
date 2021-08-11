@@ -16,7 +16,13 @@
   font-family: $s-font;
   font-style: normal;
   font-weight: normal;
-  font-size: 34px;
-  line-height: 120%;
+
+  font-size: 22px;
+  line-height: 25px;
   color: #2c2929;
+
+  @media ($tablet) {
+    font-size: 34px;
+    line-height: 120%;
+  }
 }

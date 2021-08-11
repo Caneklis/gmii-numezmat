@@ -1,0 +1,34 @@
+.social-share {
+  margin-bottom: 40px;
+
+  @media ($desktop) {
+    margin-bottom: 80px;
+  }
+
+  .ya-share2__list {
+    width: 106px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 17px;
+    row-gap: 14px;
+  }
+
+  .ya-share2__list.ya-share2__list_direction_horizontal > .ya-share2__item {
+    margin: 0;
+  }
+
+  .ya-share2__container.ya-share2__container_color-scheme_blackwhite
+    .ya-share2__badge,
+  .ya-share2__container.ya-share2__container_color-scheme_blackwhite
+    .ya-share2__mobile-popup-badge {
+    background-color: #dac9ba;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,18 @@
+.years-list {
+  @include list-reset;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+}
+
+.years-list__item {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 45px;
+  color: #b15a25;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
