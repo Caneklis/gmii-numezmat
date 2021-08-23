@@ -1,4 +1,9 @@
+import $ from "jquery";
+window.jQuery = $;
+window.$ = $;
 import Swiper from "swiper/bundle";
+import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui";
+require("./modules/bvi");
 
 document.addEventListener("DOMContentLoaded", () => {
   require("./modules/main-nav");
@@ -11,6 +16,18 @@ document.addEventListener("DOMContentLoaded", () => {
     searchFormToggle.setAttribute("aria-expanded", !expanded);
     searchFormToggle.classList.add("search-form__toggle-btn--open");
     searcForm.classList.add("search-form--open");
+  });
+
+  document.addEventListener("click", function (e) {
+    const target = e.target;
+    const its_menu = target == searcForm || searcForm.contains(target);
+    // const its_btnMenu = target == btnMenu;
+    const menu_is_active = searcForm.classList.contains("search-form--open");
+
+    if (!its_menu && menu_is_active) {
+      searchFormToggle.classList.remove("search-form__toggle-btn--open");
+      searcForm.classList.remove("search-form--open");
+    }
   });
 
   // let currentMousePos = { x: -1, y: -1 };
@@ -233,8 +250,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* Swiper
    **************************************************************/
-  var swiper = Swiper;
-  var init = false;
+  let swiper = Swiper;
+  let init = false;
 
   /* Which media query
    **************************************************************/
@@ -285,7 +302,37 @@ document.addEventListener("DOMContentLoaded", () => {
     swiperMode();
   });
 
-  var galleryTop = new Swiper(".gallery-top", {
+  const columnSlider = document.querySelectorAll(".column-content");
+
+  columnSlider.forEach((element) => {
+    const sliderTop = new Swiper(element.querySelector(".gallery-top"), {
+      spaceBetween: 0,
+      navigation: {
+        nextEl: element.querySelector(".swiper-button-next"),
+        prevEl: element.querySelector(".swiper-button-prev"),
+      },
+      pagination: {
+        el: element.querySelector(".swiper-pagination"),
+        clickable: true,
+      },
+      loop: false,
+      autoHeight: false,
+    });
+
+    const sliderThumbs = new Swiper(element.querySelector(".gallery-thumbs"), {
+      spaceBetween: 0,
+      centeredSlides: false,
+      slidesPerView: "auto",
+      touchRatio: 0.2,
+      slideToClickedSlide: true,
+      loop: false,
+      autoHeight: false,
+    });
+    sliderTop.controller.control = sliderThumbs;
+    sliderThumbs.controller.control = sliderTop;
+  });
+
+  const gallerySlider = new Swiper(".gallery-slider", {
     spaceBetween: 0,
     navigation: {
       nextEl: ".swiper-button-next",
@@ -298,15 +345,78 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: false,
     autoHeight: false,
   });
-  var galleryThumbs = new Swiper(".gallery-thumbs", {
-    spaceBetween: 0,
-    centeredSlides: false,
-    slidesPerView: "auto",
-    touchRatio: 0.2,
-    slideToClickedSlide: true,
-    loop: false,
-    autoHeight: false,
+
+  const collectionSlider = document.querySelectorAll(
+    ".collections__items-slider"
+  );
+
+  collectionSlider.forEach((element) => {
+    const slider = new Swiper(element.querySelector(".swiper-container"), {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: element.querySelector(".swiper-button-next"),
+        prevEl: element.querySelector(".swiper-button-prev"),
+        disabledClass: "swiper-button-disable",
+      },
+      pagination: {
+        el: element.querySelector(".swiper-pagination"),
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1025: {
+          slidesPerView: 3,
+          spaceBetween: 61,
+        },
+      },
+    });
   });
-  galleryTop.controller.control = galleryThumbs;
-  galleryThumbs.controller.control = galleryTop;
+
+  const personSlider = document.querySelectorAll(".department__person-photo");
+
+  personSlider.forEach((element) => {
+    const sliderTop = new Swiper(
+      element.querySelector(".department__person-slider"),
+      {
+        spaceBetween: 0,
+        slidesPerView: 1,
+        centeredSlides: true,
+        navigation: {
+          nextEl: element.querySelector(".swiper-button-next"),
+          prevEl: element.querySelector(".swiper-button-prev"),
+        },
+        loop: false,
+        autoHeight: false,
+        thumbs: {
+          swiper: sliderTop,
+        },
+      }
+    );
+
+    const sliderThumbs = new Swiper(
+      element.querySelector(".department__person-slider-thumbs"),
+      {
+        slidesPerView: 5,
+        spaceBetween: 17,
+        slideToClickedSlide: true,
+        loop: false,
+        autoHeight: false,
+        centeredSlides: true,
+        pagination: {
+          el: element.querySelector(".swiper-pagination"),
+          clickable: true,
+        },
+      }
+    );
+    sliderTop.controller.control = sliderThumbs;
+    sliderThumbs.controller.control = sliderTop;
+  });
 });

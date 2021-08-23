@@ -1,0 +1,122 @@
+---
+title: Страница новости
+description: Description test
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "./partials/_breadcrumbs.html" %}
+
+<section class="textpage">
+  <div class="textpage__wrapper">
+    <div class="textpage__head">
+      <h1 class="textpage__title">Sylloge Nummorum Graecorum. State Pushkin Museum <br>
+        of Fine Arts. Coins of the Black Sea Region. Part II. <br>
+        Ancient Coins of the Black Sea Littoral. By Sergei A. <br>
+        Kovalenko. Peeters. Leuven - Paris - Walpole, MA, 2014</h1>
+      <div class="textpage__head-info">
+        <time class="textpage__head-date" datetime="2015-03-02">02.03.2015</time>
+        <a class="textpage__head-btn" href="#">купить билет</a>
+      </div>
+    </div>
+
+    <div class="textpage__content">
+      <div class="textpage__left-col">
+        <div class="column-content">
+          <!-- Swiper -->
+          <div class="column-content__slider">
+            <div class="swiper-container gallery-top">
+              <div class="swiper-wrapper">
+                <figure class="column-content__image  swiper-slide">
+                  <div class="column-content__image-wrapper">
+                    <a href="/images/slider-pic-1.jpg" data-fancybox="gallery">
+                      <img src="/images/slider-pic-1.jpg" loading="lazy" width="281" height="400" alt="Описание фото">
+                    </a>
+                  </div>
+                </figure>
+
+                <figure class="column-content__image  swiper-slide">
+                  <div class="column-content__image-wrapper">
+                    <a href="/images/slider-pic-2.jpg" data-fancybox="gallery">
+                      <img src="/images/slider-pic-2.jpg" loading="lazy" width="400" height="400" alt="Описание фото">
+                    </a>
+                  </div>
+                </figure>
+
+                <figure class="column-content__image  swiper-slide">
+                  <div class="column-content__image-wrapper">
+                    <a href="/images/slider-pic-3.jpg" data-fancybox="gallery">
+                      <img src="/images/slider-pic-3.jpg" loading="lazy" width="400" height="300" alt="Описание фото">
+                    </a>
+                  </div>
+                </figure>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+
+          <div class="swiper-container gallery-thumbs">
+            <div class="swiper-wrapper">
+              {% for item in range(0, 2) -%}
+              <div class="column-content__image-description  swiper-slide">
+                <p>Наградная медаль за сражение при Лесной 28 сентября(9 октября) 1708 года. Происходит из <a
+                    href="#">коллекции
+                    великого князя Георгия Михайловича</a></p>
+              </div>
+              <div class="column-content__image-description  swiper-slide">
+                <p>Наградная медаль за сражение при Лесной 28 сентября(9 октября) 1708 года. Происходит из <a
+                    href="#">коллекции
+                    великого князя Георгия Михайловича</a></p>
+              </div>
+              {%- endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="social-share">
+          <p>Поделиться в соцсетях</p>
+          <script src="https://yastatic.net/share2/share.js"></script>
+          <div class="ya-share2" data-curtain data-shape="round" data-color-scheme="blackwhite"
+            data-services="vkontakte,facebook,odnoklassniki,telegram,twitter"></div>
+        </div>
+      </div>
+
+      <div class="textpage__right-col">
+        <p>Вышла в свет вторая часть каталога монет греческих городов Черного моря, хранящихся в ГМИИ им. А.С. Пушкина.
+          Каталог в формате Sylloge подготовлен С.А. Коваленко. Он включает подробные описания и черно-белые фотографии
+          монет, чеканившихся греческими полисами западного, южногои восточного берегов Черного моря, вплоть до римского
+          времени. Каталог завершает публикацию монетного материала циркумпонтийского региона из коллекции античной
+          нумизматики в ГМИИим. А.С. Пушкина.</p>
+
+        <p>Несмотря на относительно небольшое количество описанных в каталоге монет (чуть менее 500 экз.), среди них
+          имеются достаточно редкие образцы, происходящие из известных дореволюционных частных коллекций, таких,
+          например, как собрания А.А. Бобринского и В.В. Розанова. Большинство из этих монет никогда ранее не
+          публиковалось и они, несомненно, заслуживают особый интерес, как специалистов- нумизматов, так и
+          коллекционеров и всех, интересующихся различными аспектами античной истории Понтийского региона.</p>
+
+        <p>Несмотря на относительно небольшое количество описанных в каталоге монет (чуть менее 500 экз.), среди них
+          имеются достаточно редкие образцы, происходящие из известных дореволюционных частных коллекций, таких,
+          например, как собрания А.А. Бобринского и В.В. Розанова. Большинство из этих монет никогда ранее не
+          публиковалось и они, несомненно, заслуживают особый интерес, как специалистов- нумизматов, так и
+          коллекционеров и всех, интересующихся различными аспектами античной истории Понтийского региона.</p>
+
+        <div class="download">
+          <p>Скачать файлы</p>
+          <ul class="download__list">
+            <li class="download__item"><a href="#" download="">Федеральный закон от 21.07.2014 N 256-ФЗ</a></li>
+            <li class="download__item"><a href="#" download="">Приказ Министерства культуры РФ от 20 февраля 2015 г.
+                N 277 </a></li>
+            <li class="download__item"><a href="#" download="">Федеральный закон от 28 декабря 2013 г. N 426-ФЗ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

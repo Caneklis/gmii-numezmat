@@ -71,10 +71,20 @@
   background-color: #f3f3f3;
 
   .swiper-button-next {
-    right: -37px;
+    display: none;
+
+    @media ($tablet) {
+      display: block;
+      right: -37px;
+    }
   }
   .swiper-button-prev {
-    left: -37px;
+    display: none;
+
+    @media ($tablet) {
+      display: block;
+      left: -37px;
+    }
   }
 
   .swiper-container-horizontal > .swiper-pagination-bullets,

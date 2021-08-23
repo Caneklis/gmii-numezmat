@@ -57,6 +57,8 @@
 }
 
 .events__item-pic {
+  background-color: #f3f3f3;
+
   @media ($desktop) {
     height: 440px;
     display: grid;
@@ -80,7 +82,7 @@
       grid-area: container;
       position: relative;
       margin: auto;
-      z-index: -1;
+      z-index: 1;
       place-self: center;
       align-self: flex-start;
     }

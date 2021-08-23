@@ -1,0 +1,104 @@
+---
+title: Медия
+description: Description test
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<section class="media-page">
+  <div class="media-page__wrapper">
+    <h1 class="media-page__title">{{title}}</h1>
+    <div class="media-page__section-filter  filter">
+      <ul class="filter__list">
+        <li class="filter__item"><a class="filter__item-btn" href="#">Игры</a></li>
+        <li class="filter__item"><a class="filter__item-btn" href="#">Аудио-гиды</a></li>
+        <li class="filter__item"><a class="filter__item-btn  filter__item-btn--active" href="#">Лекции</a></li>
+        <li class="filter__item"><a class="filter__item-btn" href="#">Видео</a></li>
+        <li class="filter__item"><a class="filter__item-btn" href="#">Реконструкции</a></li>
+        <li class="filter__item"><a class="filter__item-btn" href="#">Публикации</a></li>
+        <li class="filter__item"><a class="filter__item-btn" href="#">Другое</a></li>
+      </ul>
+    </div>
+
+    <section class="media-page__section">
+      <h2 class="media-page__section-title">Игры, квизы, викторины</h2>
+      <ul class="media-page__list">
+        {% for item in range(0, 2) -%}
+        <li class="media-page__item">
+          <article class="media-page__article">
+            <div class="media-page__article-media">
+              <img src="//via.placeholder.com/730x270" loading="lazy" width="730" height="270" alt="Описание фото">
+            </div>
+            <div class="media-page__article-text">
+              <h2>«Наметив контуры резцом…»
+                Monetae Memory</h2>
+              <p>Мы сделали игру в жанре «Мемори», в которой вам нужно найти и составить пары из одинаковых экспонатов.
+                Выбирайте уровень сложности и начинайте тренировать свою память.
+                Описания всех экспонатов приведены под игровым полем. Больше монет, медалей и других памятников
+                нумизматики вы найдете на выставке, которая работает в Главном здании до 30 октября 2016 года.</p>
+              <p><a href="www.arts-museum.ru/quiz/memory/" target="_blank"
+                  rel=noopener>www.arts-museum.ru/quiz/memory/</a></p>
+            </div>
+          </article>
+        </li>
+        {%- endfor %}
+      </ul>
+    </section>
+
+    <section class="media-page__section">
+      <h2 class="media-page__section-title">Видео</h2>
+      <ul class="media-page__list">
+        <li class="media-page__item">
+          <article class="media-page__article">
+            <div class="media-page__article-media">
+              <div class="media-page__article-iframe">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/59yVwVhAQgA"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="media-page__article-text">
+              <h2>«Спросите хранителя»
+                С.А. Коваленко</h2>
+              <p>Друзья! Мы начинаем десятую встречу нашего онлайн-проекта «Спросите-хранителя». В прямом эфире
+                заведующий отделом нумизматики ГМИИ Сергей Анатольевич Коваленко. Тема беседы «Рождение монеты. Легенды
+                и реальность». После небольшого выступления Сергей Анатольевич ответит на вопросы слушателей.
+              </p>
+              <p><a href="https://www.youtube.com/watch?v=koyt1pjIZzw" target="_blank"
+                  rel=noopener>https://www.youtube.com/watch?v=koyt1pjIZzw</a></p>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section class="media-page__section">
+      <h2 class="media-page__section-title">Аудио-гиды</h2>
+      <ul class="media-page__list">
+        {% for item in range(0, 2) -%}
+        <li class="media-page__item">
+          <article class="media-page__article">
+            <div class="media-page__article-media">
+              <img src="//via.placeholder.com/730x270" loading="lazy" width="730" height="270" alt="Описание фото">
+            </div>
+            <div class="media-page__article-text">
+              <h2>«Название продукта»
+                в две строки</h2>
+              <p>Мы сделали игру в жанре «Мемори», в которой вам нужно найти и составить пары из одинаковых экспонатов.
+                Выбирайте уровень сложности и начинайте тренировать свою память.
+                Описания всех экспонатов приведены под игровым полем. Больше монет, медалей и других памятников
+                нумизматики вы найдете на выставке, которая работает в Главном здании до 30 октября 2016 года.
+              </p>
+              <p><a href="#" target="_blank" rel=noopener>ссылка на продукт</a></p>
+            </div>
+          </article>
+        </li>
+        {%- endfor %}
+      </ul>
+    </section>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,169 @@
+.sponsors__wrapper {
+  @include wrapper;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.sponsors__title {
+  @include main-title;
+
+  @media ($tablet) {
+    grid-column: 1/-1;
+  }
+}
+
+.sponsors__list {
+  @include list-reset;
+  padding-bottom: 78px;
+  margin-bottom: 67px;
+  border-bottom: 1px solid #d7b8a8;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.sponsors__head {
+  margin-bottom: 60px;
+
+  @media ($tablet) {
+    display: grid;
+    grid-template-columns: 0.7fr 0.3fr;
+    column-gap: 4.5%;
+    align-items: flex-start;
+  }
+
+  @media ($desktop) {
+    column-gap: 100px;
+    margin-bottom: 90px;
+  }
+}
+
+.sponsors__contacts {
+  padding-top: 65px;
+  font-size: 17px;
+  line-height: 30px;
+  color: #000000;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: $links-color;
+    text-decoration: underline;
+  }
+}
+
+.sponsors__contacts-title {
+  margin: 0;
+  font-family: $s-font;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: #9a99a2;
+}
+
+.sponsors__head-text {
+  color: #000000;
+
+  @media ($tablet) {
+    padding-top: 65px;
+    grid-column: 1/2;
+    padding-left: 12%;
+  }
+
+  p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 24px;
+
+    @media ($tablet) {
+      font-size: 15px;
+      line-height: 30px;
+    }
+  }
+}
+
+.sponsors__contacts {
+  @media ($tablet) {
+    grid-column: 2/3;
+  }
+}
+
+.sponsors__list-item {
+  margin-bottom: 40px;
+
+  @media ($tablet) {
+    display: grid;
+    grid-template-columns: 1.145fr 2fr;
+    column-gap: 4.5%;
+    margin-bottom: 60px;
+  }
+
+  @media ($desktop) {
+    column-gap: 8.5%;
+    margin-bottom: 90px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sponosors__list-title {
+  margin: 0;
+  margin-bottom: 60px;
+  font-family: $s-font;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.sponsors__logo {
+  h4 {
+    margin: 0;
+    margin-bottom: 25px;
+    font-family: $s-font;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #d18e48;
+
+    @media ($desktop) {
+      margin-bottom: 57px;
+    }
+  }
+
+  @media ($desktop) {
+    width: 377px;
+    margin-left: auto;
+    // padding-left: 22.5%;
+  }
+
+  img {
+    margin-top: 10px;
+  }
+}
+
+.sponsors__text {
+  color: #000000;
+
+  h4 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 24px;
+
+    @media ($tablet) {
+      font-size: 15px;
+      line-height: 30px;
+    }
+  }
+}

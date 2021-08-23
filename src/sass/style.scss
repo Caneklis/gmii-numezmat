@@ -1,5 +1,7 @@
 @import "../../node_modules/normalize.css/normalize";
 @import "../../node_modules/swiper/swiper-bundle";
+@import "../../node_modules/@fancyapps/ui/dist/fancybox";
+@import "libs/bvi";
 @import "global/fonts";
 @import "global/variables";
 @import "global/mixins";
@@ -26,4 +28,10 @@
 @import "blocks/news-page";
 @import "blocks/subscribe";
 @import "blocks/years-list";
+@import "blocks/search-page";
+@import "blocks/media-page";
 @import "blocks/filter";
+@import "blocks/sponsors";
+@import "blocks/glossary";
+@import "blocks/collections";
+@import "blocks/department";

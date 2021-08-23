@@ -8,7 +8,7 @@
 
   @media ($desktop) {
     display: grid;
-    grid-template-columns: 850px auto;
+    grid-template-columns: minmax(auto, 1000px) auto;
     margin-bottom: 105px;
 
     &--no-mb {
@@ -91,6 +91,8 @@
   // padding-bottom: 134px;
   padding-bottom: 70px;
 
+  color: #000000;
+
   p,
   ul,
   ol {
@@ -98,6 +100,11 @@
     margin-bottom: 30px;
     font-size: 15px;
     line-height: 30px;
+  }
+
+  strong,
+  b {
+    font-weight: 500;
   }
 
   p + h2 {
@@ -130,7 +137,7 @@
     list-style: none;
   }
 
-  li {
+  > ul li {
     position: relative;
     padding-left: 25px;
 
@@ -243,4 +250,95 @@
   @media ($desktop) {
     margin-top: 0;
   }
+}
+
+.textpage__head-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 45px;
+
+  @media ($desktop) {
+    padding-top: 0;
+    align-items: flex-end;
+  }
+}
+
+.textpage__head-date {
+  margin-bottom: 20px;
+  font-family: $s-font;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: right;
+  color: #9a99a2;
+}
+
+.textpage__head-btn {
+  // min-width: 195px;
+  padding: 5px 27px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #f3f3f3;
+  background: #e7a45e;
+  border-radius: 4px;
+}
+
+.textpage__table {
+  margin-top: 50px;
+  margin-bottom: 35px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #2c2929;
+
+  @media ($tablet) {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  @media ($desktop) {
+    margin-bottom: 96px;
+  }
+
+  table {
+    border-collapse: collapse;
+    vertical-align: top;
+  }
+
+  td {
+    padding: 10px 0;
+    vertical-align: top;
+
+    &:first-child {
+      font-family: $s-font;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 24px;
+      color: #937b65;
+
+      @media ($tablet) {
+        font-size: 18px;
+        line-height: 30px;
+      }
+
+      @media ($desktop) {
+        min-width: 177px;
+      }
+    }
+  }
+}
+
+.textpage__head-text {
+  max-width: 140px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #8b8784;
 }

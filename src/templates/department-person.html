@@ -1,0 +1,85 @@
+---
+title: Отдел - сотрудник
+description: Description test
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "./partials/_breadcrumbs.html" %}
+
+<section class="department">
+  <div class="department__wrapper">
+    <h1 class="department__title">Коваленко Сергей Анатольевич</h1>
+    <div class="department__person">
+      <div class="department__person-photo">
+        <div class="department__person-slider  swiper-container">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-wrapper">
+            {% for item in range(0, 5) -%}
+            <div class="department__person-slide  swiper-slide">
+              <a class="department__person-popup-link" href="https://lipsum.app/id/1/1024x768" data-fancybox="gallery"
+                data-caption="Описание фото для всплывающего окна если надо">
+                <img src="//via.placeholder.com/398x398//000000/FFFFFF/?text={{item}}" loading="lazy" width="398"
+                  height="398" alt="Описание фото">
+              </a>
+            </div>
+            {%- endfor %}
+          </div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+        <div class="department__person-slider-thumbs  swiper-container">
+          <div class="swiper-wrapper">
+            {% for item in range(0, 5) -%}
+            <div class="department__person-slide-thumb  swiper-slide">
+              <img src="//via.placeholder.com/85x85/?text={{item}}" loading="lazy" width="85" height="85"
+                alt="Описание фото">
+            </div>
+            {%- endfor %}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="department__person-text">
+        <h2>Заведующий Отделом, хранитель античной коллекции</h2>
+        <ul>
+          <li>Окончил Исторический факультет МГУ им. М.В. Ломоносова, кафедру археологии (1984)
+          <li>Кандидат исторических наук (1989)</li>
+          <li>Работает в ГМИИ им. А.С. Пушкина с 1988 г.</li>
+          <li>Hirayma trainee curator in the Coins&Medals Department of the British Museum (1994-1995)</li>
+          <li>Член Королевского нумизматического общества (RNS, Великобритания)</li>
+          <li>Стипендиат фонда Александра фон Гумбольдта (2000-2002)</li>
+          <li>Автор 80 научных работ, в том числе — двух монографий</li>
+          </li>
+        </ul>
+
+        <h3>Основное направление научной деятельности:</h3>
+        <p>Нумизматика Северного Причерноморья, античная археология Северного Причерноморья, эллинистическая рельефная
+          керамика</p>
+
+        <h3>Археологические экспедиции:</h3>
+        <p>Новгородская, Среднеенисейская (Хакасия), Таманская, зам. начальника КАЭ МГУ им. М.В. Ломоносова, исследующей
+          греко-скифское городище "Чайка" (г. Евпатория)/p>
+      </div>
+
+      <div class="department__person-links">
+        <h4>Издания и публикации</h4>
+        <ul>
+          <li><a href="#">Кауфман И.И. Бумажно-денежные проекты и экстраординарные финансы. - СПб., 1879.</a></li>
+          <li><a href="#">Кауфман И.И. Вексельные курсы России за 50 лет. 1841-1890 // </a></li>
+          <li><a href="#">Временник Центрального статистического комитета МВД. - СПб., 1892. №22.</a></li>
+          <li><a href="#">Кауфман И.И. Государственные долги России // Вестник Европы. 1885. №1,2.</a></li>
+          <li><a href="#">Кауфман И.И. Из истории бумажных денег в России / [Соч.) И.И. Кауфмана, ординарного профессора
+              Щмператорского] С.Петербургского университета. - СПб.,
+              1909.</a></li>
+          <li><a href="#">Кауфман И.И. Кредит, банки и денежное обращение. - СПб., 1873.</a></li></a>
+          <li><a href="#">Кауфман И.И. Кредитные билеты, их упадок и восстановление. -СПб., 1888.</li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

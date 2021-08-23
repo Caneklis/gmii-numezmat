@@ -49,7 +49,7 @@ const renderHtml = (onlyChanged) => {
         path: "src/templates",
         manageEnv: manageEnvironment,
         data: {
-          base_path: "",
+          base_path: "/",
         },
       })
     )
@@ -188,6 +188,7 @@ const optimizeImages = () => {
     .pipe(dest("build/images"));
 };
 exports.sprite = sprite;
+exports.js = js;
 exports.build = build;
 exports.start = start;
 exports.imagemin = optimizeImages;

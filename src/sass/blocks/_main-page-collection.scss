@@ -1,16 +1,19 @@
 .main-page-collection__wrapper {
   @include wrapper;
+  padding-bottom: 45px;
 
   @media ($tablet) {
     display: grid;
     grid-template-columns: 1fr minmax(min-content, 930px);
     column-gap: 60px;
     align-items: flex-start;
+    padding-bottom: 137px;
   }
 }
 
 .main-page-collection__title {
   margin: 0;
+  margin-bottom: 25px;
   font-family: $s-font;
   font-weight: 400;
   font-size: 30px;

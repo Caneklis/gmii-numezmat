@@ -7,7 +7,7 @@
     <!-- Primary Meta Tags -->
     <title>404</title>
     <meta name="description" content="Description test">
-    <link rel="stylesheet" media="all" href="css/style.min.css" />
+    <link rel="stylesheet" media="all" href="/css/style.min.css" />
     <!-- BEGIN social data -->
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -22,17 +22,17 @@
     <meta property="twitter:description" content="">
     <meta property="twitter:image" content="">
     <!-- END social data -->
-    <link rel="icon" href="favicon/favicon.ico"><!-- 32×32 -->
-    <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png"><!-- 180×180 -->
-    <link rel="manifest" href="favicon/manifest.webmanifest">
+    <link rel="icon" href="/favicon/favicon.ico"><!-- 32×32 -->
+    <link rel="icon" href="/favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="manifest" href="/favicon/manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="header">
       <div class="header__wrapper">
         <nav class="menu">
           <div class="logo">
-            <a class="logo__link" href="#">
+            <a class="logo__link" href="index.html">
               <img src="/images/logo.svg" width="131" height="64" alt="Логотип ГМИИ">
               <div class="logo__text">отдел нумизматики</div>
             </a>
@@ -40,12 +40,12 @@
           <ul class="header__user-block">
             <li class="header__user-block-item  header__user-block-item--search">
               <div class="search-form">
-                <form class="search-form__form" action="" method="GET" id="search-form">
+                <form class="search-form__form" action="#" method="GET" id="search-form">
                   <div class="search-form__wrapper">
                     <input type="text" class="search-form__input">
                     <button class="search-form__btn  search-form__submit-btn" type="submit">
                       <svg class="search-form__icon" aria-hidden="true" width="11" height="11">
-                        <use href="images/sprite_auto.svg#icon-search"></use>
+                        <use href="/images/sprite_auto.svg#icon-search"></use>
                       </svg>
                       <span class="visually-hidden">Найти</span>
                     </button>
@@ -53,20 +53,20 @@
                 </form>
                 <button class="search-form__btn  search-form__toggle-btn" type="button" aria-expanded="false" aria-controls="search-form">
                   <svg class="search-form__icon" aria-hidden="true" width="11" height="11">
-                    <use href="images/sprite_auto.svg#icon-search"></use>
+                    <use href="/images/sprite_auto.svg#icon-search"></use>
                   </svg>
                   <span class="visually-hidden">Открыть форму поиска</span>
                 </button>
               </div>
             </li>
-            <li class="header__user-block-item  header__user-block-item--contrast"><a href="#">Aa</a></li>
+            <li class="header__user-block-item  header__user-block-item--contrast"><a class="bvi-open" href="#" title="Версия сайта для слабовидящих">Aa</a></li>
             <li class="header__user-block-item  header__user-block-item--lang"><a href="#">EN</a></li>
           </ul>
           <button class="menu__button" type="button" aria-expanded="false" aria-controls="menu-list">
             <span class="visually-hidden">Открыть/закрыть меню</span>
             <svg class="menu__icon" aria-hidden="true" width="25" height="16">
-              <use class="menu__icon-menu" href="images/sprite_auto.svg#menu"></use>
-              <use class="menu__icon-cross" href="images/sprite_auto.svg#cross"></use>
+              <use class="menu__icon-menu" href="/images/sprite_auto.svg#menu"></use>
+              <use class="menu__icon-cross" href="/images/sprite_auto.svg#cross"></use>
             </svg>
           </button>
           <ul class="menu__list" id="menu-list">
@@ -84,7 +84,7 @@
               </ul>
             </li>
             <li class="menu__item"><a class="menu__link" href="#">Выставки</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Новости и события</a></li>
+            <li class="menu__item"><a class="menu__link" href="news.html">Новости и события</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Благодарим</a></li>
           </ul>
         </nav>
@@ -126,8 +126,12 @@
       </div>
     </footer>
     <!-- BEGIN scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="js/main.min.js"></script>
+    <script src="/js/main.min.js"></script>
     <!-- END scripts -->
+    <!-- <script src="js/bvi.min.js"></script> -->
+    <script>
+      new isvek.Bvi();
+
+    </script>
   </body>
 </html>

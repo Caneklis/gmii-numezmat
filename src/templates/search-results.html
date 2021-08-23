@@ -1,0 +1,53 @@
+---
+title: Результаты поиска
+description: Description test
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<section class="search-page">
+  <div class="search-page__wrapper">
+    <h1 class="search-page__title">{{title}}</h1>
+    <form action="#" class="search-page__form">
+      <div class="search-page__form-field">
+        <input type="search" class="search-page__form-input">
+        <button class="search-page__btn" type="submit">
+          <svg class="search-page__btn-icon" aria-hidden="true" width="11" height="11">
+            <use href="/images/sprite_auto.svg#icon-search"></use>
+          </svg>
+          <span class="visually-hidden">Найти</span></button>
+      </div>
+    </form>
+    <ul class="search-page__categories-list">
+      <li class="saerch-page__categories-item"><a href="#">Афиша (166)</a></li>
+      <li class="saerch-page__categories-item"><a href="#">Коллекции (19)</a></li>
+      <li class="saerch-page__categories-item"><a href="#">Новости (39)</a></li>
+      <li class="saerch-page__categories-item"><a href="#">Именной указатель (7)</a></li>
+      <li class="saerch-page__categories-item"><a href="#">Другое (55)</a></li>
+    </ul>
+
+    <div class="search-page__request">
+      <p class="search-page__request-text">Вы искали</p>
+      <p class="search-page__request-title">«КАРЛ»</p>
+    </div>
+
+    <div class="search-page__results">
+      <ul class="search-page__results-list">
+        {% for item in range(0, 5) -%}
+        <li class="search-page__results-item">
+          <p class="search-page__results-item-type">Коллекции</p>
+          <h3 class="search-page__results-item-title"><a href="#">В честь завершения строительства Королевского двроца в
+              Стогольме</a></h3>
+          <p class="search-page__results-item-text">Карлстен Арвид (по проекту Никодемуса Тессина)</p>
+          <p class="search-page__results-item-text">Погрудный портрет Карла XII в парике, доспехах и мантии вправо, ниже
+            монограмма медальера АК.</p>
+          <p class="search-page__results-item-text">Вид на фасад Королевского дворца в Стокгольме.</p>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,139 @@
+---
+title: Страница коллекции 2 предмета
+description: Description test
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "./partials/_breadcrumbs.html" %}
+
+<section class="collections">
+  <div class="collections__wrapper">
+    <div class="collections__head">
+      <h1 class="collections__title">Шведский народ желает удачи своему <br> королю, 1709</h1>
+      <div class="collections__head-info">
+        <a class="collections__head-btn" href="#">Аудиогид</a>
+      </div>
+    </div>
+
+    <div class="collections__main-pictures">
+      <a href="/images/collections-item-2-1.png" data-fancybox="gallery"
+        data-caption="Описание фото для всплывающего окна если надо">
+        <img src="/images/collections-item-2-1.png" loading="lazy" width="490" height="490" alt="Изображение предмета">
+      </a>
+      <a href="/images/collections-item-2-2.png" data-fancybox="gallery"
+        data-caption="Описание фото для всплывающего окна если надо">
+        <img src="/images/collections-item-2-2.png" loading="lazy" width="490" height="490"
+          alt="Изображение предмета другая сторона">
+      </a>
+    </div>
+
+    <div class="collections__description-item">
+      <div class="collections__description-item-col">
+        <table>
+          <tr>
+            <td>Автор</td>
+            <td>Хедлингер Иоганн Карл</td>
+          </tr>
+          <tr>
+            <td>Материал</td>
+            <td>олово</td>
+          </tr>
+          <tr>
+            <td>Размер</td>
+            <td>51,5 мм</td>
+          </tr>
+          <tr>
+            <td>Происхождение</td>
+            <td>Коллекция А.А. Стаховича (Париж), в ГМИИ с 1983</td>
+          </tr>
+          <tr>
+            <td>Инвентарный №</td>
+            <td>252004</td>
+          </tr>
+        </table>
+      </div>
+      <div class="collections__description-item-col  collections__description-item-col--start-8">
+        <table>
+          <tr>
+            <td>Литература</td>
+            <td><a href="#">Hildebrand 1874</a>, d. I (s. 593, № 197);<br>
+              Пискунова 1950 (№ 222б);<br>
+              Заворотная 1988 (№ 7);<br>
+              Русские победы 2009, 175</td>
+          </tr>
+          <tr>
+            <td>Ключевые слова</td>
+            <td><a href="#">Гораций,</a> <a href="#">Квинт Гораций Флакк,</a><a href="#">Карл XII,</a> <a
+                href="#">Семёнов-Тян-Шанский,</a> <a href="#">Андрей Петрович,</a> <a href="#">Стахович Александр
+                Александрович,</a> <a href="#">Хедлингер
+                Иоганн Карл,</a> <a href="#">Карл XII (1697-1718),Швеция,</a> <a href="#">кафтан,</a> <a
+                href="#">мантия,</a> <a href="#">шейный платок,</a> <a href="#">Оды (Carmina),</a> <a
+                href="#">литературная цитата,</a> <a href="#">лев,</a> <a href="#">веревка,</a> <a href="#">INDOCILIS
+                PATI</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="collections__description-item">
+      <div
+        class="collections__description-item-col  collections__description-item-col--6  collections__description-item-col--more-table-cell-padding">
+        <table>
+          <tr>
+            <td>Лицевая сторона</td>
+            <td>По кругу: CAROL. XII. D. G. R. SVEC. - OCCVB. D. 30. NOV. A. 1718. (Карл XII Божьей милостью король
+              Швеции погиб дня 30 ноября года 1718).</td>
+          </tr>
+          <tr>
+            <td>Оборотная сторона</td>
+            <td>
+              <p>Погрудный портрет Карла XII в кафтане и в королевской мантии, вправо. В обрезе руки подпись
+                медальера:
+                Hedl. (Хедлингер).</p>
+
+              <p>По кругу: INDOCILIS PATI. (Непривыкший терпеть)<sup>*</sup>. В обрезе: IN PERPET. MEMOR./ MAGNANIMI.
+                (На вечную память о мужественном)<sup>**</sup>.</p>
+
+              <p><sup>*</sup> Возможно, легенда представляет собой цитату из Горация (Hor. Car. I, 1, 15 - 18):</p>
+
+              <p><i>Luctantem Icariis fluctibus Africum <br>
+                  mercator metuens otium et oppidi<br>
+                  laudat rura sui; mox reficit rates<br>
+                  quassas, indocilis pauperiem pati.</i></p>
+
+              <p>... купца, если он бури неистовой<br>
+                Испугавшись, начнет пылко расхваливать<br>
+                Мир родимых полей, - вновь за починкою<br>
+                Видим мы корабля в страхе пред бедностью ...</p>
+
+              <p>Перевод А. Семенова-Тян-Шанского.</p>
+
+              <p>«Неспособный научиться терпеть» (Пискунова 1950, № 222).</p>
+
+              <p><sup>**</sup> «На вечную память о великодушном» (Пискунова 1950, № 222).</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="collections__description-item-col  collections__description-item-col--additional">
+        <table>
+          <tr>
+            <td>Дополнительные материалы</td>
+            <td>
+              <ul>
+                <li><a href="#">Аудиогид</a></li>
+                <li><a href="#">Видеоматериалы</a></li>
+                <li><a href="#">Публикации</a></li>
+                <li><a href="#">Коллекция</a></li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

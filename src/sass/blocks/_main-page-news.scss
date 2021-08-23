@@ -87,8 +87,9 @@
 }
 
 .main-page-news__photo {
+  background-color: #f3f3f3;
+
   @media ($tablet) {
-    height: 270px;
     display: grid;
     grid-template: "container";
     place-items: center;
@@ -101,6 +102,10 @@
     }
   }
 
+  @media ($desktop) {
+    height: 270px;
+  }
+
   img {
     max-width: 100%;
     height: auto;
@@ -110,7 +115,7 @@
     @media ($tablet) {
       grid-area: container;
       position: relative;
-      z-index: -1;
+      z-index: 1;
       place-self: center;
       align-self: flex-start;
     }

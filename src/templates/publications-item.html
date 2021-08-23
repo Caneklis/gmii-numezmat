@@ -1,0 +1,131 @@
+---
+title: Страница публикации издания
+description: Description test
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "./partials/_breadcrumbs.html" %}
+
+<section class="textpage">
+  <div class="textpage__wrapper">
+    <div class="textpage__head">
+      <h1 class="textpage__title">Музей русской истории за границей (1897-1914) <br>
+        при Свято-Князь-Владимирском братстве. Каталог коллекции из собрания отдела нумизматики ГМИИ им. А.С. Пушкина.
+      </h1>
+      <div class="textpage__head-info">
+        <a class="textpage__head-btn" href="#">купить</a>
+        <p class="textpage__head-text">интернет-магазин откроется в новом окне</p>
+      </div>
+    </div>
+
+    <div class="textpage__content">
+      <div class="textpage__left-col">
+        <div class="column-content  column-content--no-mb">
+          <!-- Swiper -->
+          <div class="column-content__slider">
+            <div class="swiper-container gallery-slider">
+              <div class="swiper-wrapper">
+                <figure class="column-content__image  swiper-slide">
+                  <div class="column-content__image-wrapper">
+                    <a href="https://lipsum.app/id/1/1024x768" data-fancybox="gallery">
+                      <img src="images/slider-pic-1.jpg" loading="lazy" width="281" height="400" alt="Описание фото">
+                    </a>
+                  </div>
+                </figure>
+
+                <figure class="column-content__image  swiper-slide">
+                  <div class="column-content__image-wrapper">
+                    <a href="https://lipsum.app/id/1/1024x768" data-fancybox="gallery">
+                      <img src="images/slider-pic-2.jpg" loading="lazy" width="400" height="400" alt="Описание фото">
+                    </a>
+                  </div>
+                </figure>
+
+                <figure class="column-content__image  swiper-slide">
+                  <div class="column-content__image-wrapper">
+                    <a href="https://lipsum.app/id/1/1024x768" data-fancybox="gallery">
+                      <img src="images/slider-pic-3.jpg" loading="lazy" width="400" height="300" alt="Описание фото">
+                    </a>
+                  </div>
+                </figure>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+
+        <div class="textpage__table">
+          <table>
+            <tr>
+              <td>Автор</td>
+              <td>Волкова У.М., Петров А.А.,
+                Константинопольский В.Б.</td>
+            </tr>
+            <tr>
+              <td>Язык издания</td>
+              <td>русский</td>
+            </tr>
+            <tr>
+              <td>Год издания</td>
+              <td>2015</td>
+            </tr>
+            <tr>
+              <td>Размер</td>
+              <td>200×310 мм</td>
+            </tr>
+            <tr>
+              <td>ISBN</td>
+              <td>978-5-905942-95-2</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="social-share  social-share--one-line">
+          <p>Поделиться в соцсетях</p>
+          <script src="https://yastatic.net/share2/share.js"></script>
+          <div class="ya-share2" data-curtain data-shape="round" data-color-scheme="blackwhite"
+            data-services="vkontakte,facebook,odnoklassniki,telegram,twitter"></div>
+        </div>
+      </div>
+
+      <div class="textpage__right-col">
+        <p><strong>Волкова У.М. Музей русской истории за границей (1897–1914) при Свято-Князь-Владимирском братстве.
+            Каталог коллекции. Из собрания отдела нумизматики ГМИИ им. А.С. Пушкина / М., 2015. – 340 c.: ил.</strong>
+        </p>
+
+        <p>Издание знакомит читателя с хранящейся в ГМИИ им. А.С. Пушкина частью нумизматической коллекции Музея русской
+          истории за границей, открытого в 1897 году в берлинском районе Тегель протоиереем А.П. Мальцевым при
+          православном Свято-Князь-Владимирском братстве. Этот музей просуществовал лишь до начала Первой мировой войны,
+          и судьба многих его экспонатов остается неизвестной. В ГМИИ находятся 1105 памятников нумизматической
+          коллекции и три эмалевых медальона, девять предметов религиозного культа – в собраниях Киевского национального
+          музея русского искусства и Ставропольского краевого музея изобразительных искусств.</p>
+
+        <p>Нумизматическая часть каталога представлена античными, восточными, русскими, европейскимии американскими
+          монетами, а также европейскими и русскими медалями, жетонами и наградами.
+          Большинство предметов публикуются впервые.</p>
+
+        <p>Издание знакомит читателя с хранящейся в ГМИИ им. А.С. Пушкина частью нумизматической коллекции Музея русской
+          истории за границей, открытого в 1897 году в берлинском районе Тегель протоиереем А.П. Мальцевым при
+          православном Свято-Князь-Владимирском братстве. Этот музей просуществовал лишь до начала Первой мировой войны,
+          и судьба многих его экспонатов остается неизвестной. В ГМИИ находятся 1105 памятников нумизматической
+          коллекции и три эмалевых медальона, девять предметов религиозного культа – в собраниях Киевского национального
+          музея русского искусства и Ставропольского краевого музея изобразительных искусств.</p>
+
+        <p>Нумизматическая часть каталога представлена античными, восточными, русскими, европейскимии американскими
+          монетами, а также европейскими и русскими медалями, жетонами и наградами.
+          Большинство предметов публикуются впервые.</p>
+
+        <p>Нумизматическая часть каталога представлена античными, восточными, русскими, европейскимии американскими
+          монетами, а также европейскими и русскими медалями, жетонами и наградами.
+          Большинство предметов публикуются впервые.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

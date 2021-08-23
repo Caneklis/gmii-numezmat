@@ -22,6 +22,15 @@
   .ya-share2__container.ya-share2__container_color-scheme_blackwhite
     .ya-share2__mobile-popup-badge {
     background-color: #dac9ba;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #fea13a;
+    }
+
+    &:active {
+      background-color: #d18e48;
+    }
   }
 
   p {
@@ -30,5 +39,11 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
+  }
+
+  &--one-line {
+    .ya-share2__list {
+      width: 100%;
+    }
   }
 }

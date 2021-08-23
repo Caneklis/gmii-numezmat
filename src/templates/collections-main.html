@@ -1,0 +1,93 @@
+---
+title: Коллекции
+description: Коллекции главная
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<section class="collections">
+  <div class="collections__wrapper  collections__wrapper--pt collections__wrapper--pb">
+    <div class="collections__head">
+      <h1 class="collections__title">{{title}}</h1>
+      <div class="collections__head-content">
+        <div class="collection__head-text">
+          <p>Современная коллекция ГМИИ им. А.С.Пушкина — это собрание европейского уровня, в котором более двухсот
+            тысяч памятников нумизматики: монет, медалей, орденов, нагрудных знаков, бон, гемм, слепков с европейских
+            кабинетов резных камней и более трех тысяч томов специальной библиотеки.</p>
+          <p>Коллекция имеет четыре основных раздела: <a href="#">античный</a>, <a href="#">западноевропейский</a>,
+            русский и восточный. </p>
+          <p><a href="#">Подробнее о история коллекции</a></p>
+        </div>
+        <div class="collections__head-picture">
+          <img src="//via.placeholder.com/955x375" loading="lazy" alt="Описание изображения">
+        </div>
+      </div>
+    </div>
+
+    <ul class="collections__list">
+      {% for item in range(1, 4) -%}
+      <li class="collections__slider-item">
+        <div class="collections__slider-item-text">
+          <h3>Монеты</h3>
+          <p>Монеты представлены текст текст текст. Коллекция насчитывает столько-то монет. Интересно что... текст текст
+            текст текст текст текст текст текст текст текст текст текст</p>
+          <p><a href="#">Подробнее — раздел «МОНЕТЫ»</a></p>
+        </div>
+
+        <div class="collections__items-slider" data-id="{{item}}">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              {% for item in range(1, 4) -%}
+              <div class="collections__item-card  swiper-slide">
+                <a href="/images/collections-slider-item-{{item}}.png" data-fancybox="gallery"
+                  data-caption="Описание фото для всплывающего окна если надо">
+                  <img src="/images/collections-slider-item-{{item}}.png" width="280" height="280" loading="lazy"
+                    alt="Описание изображения">
+                </a>
+                <h4><a href="#">Канишка I</a></h4>
+                <p>1323 г.</p>
+              </div>
+              {%- endfor %}
+              <div class="collections__item-card  swiper-slide">
+                <img src="//via.placeholder.com/280x280" width="280" height="280" loading="lazy"
+                  alt="Описание изображения">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </li>
+      {%- endfor %}
+    </ul>
+
+    <div class="collections__reference">
+      <ul class="collections__reference__list">
+        {% for item in range(0, 3) -%}
+        <li class="collections__reference-item">
+          <a href="#" class="reference__item-link">
+            <img src="//via.placeholder.com/280x280" loading="lazy" width="350" height="270" alt="Описание фото">
+          </a>
+        </li>
+        {%- endfor %}
+      </ul>
+      <div class="collections__reference-links">
+        <h2 class="collections__reference-links-title">Индексы <br>
+          и справочники</h2>
+        <ul class="collections__reference-aside-list">
+          <li class="collections__reference-aside-item"><a href="#">Топографический указатель</a></li>
+          <li class="collections__reference-aside-item"><a href="#">Предметный указатель</a></li>
+          <li class="collections__reference-aside-item"><a href="#">Материалы</a></li>
+          <li class="collections__reference-aside-item"><a href="#">Происхождение</a></li>
+          <li class="collections__reference-aside-item"><a href="#">События</a></li>
+          <li class="collections__reference-aside-item"><a href="#">Легенды</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}
