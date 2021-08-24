@@ -453,3 +453,155 @@
     text-decoration: underline;
   }
 }
+
+.collections__head-list {
+  @include list-reset;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+
+  @media ($tablet) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media ($tablet) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.collections__filter-results {
+  @include list-reset;
+  margin-top: 45px;
+  padding-top: 20px;
+  border-top: 1px solid #d7b8a8;
+}
+
+.collections__filter-results-item {
+  display: grid;
+  border-bottom: 1px solid #d7b8a8;
+  padding: 25px 0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @media ($tablet) {
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-gap: 20px;
+    padding: 60px 0;
+  }
+}
+
+.collections__filter-results-photos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  grid-column: 1/-1;
+
+  @media ($tablet) {
+    grid-column: col / span 5;
+    gap: 40px;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 209px;
+    height: 209px;
+  }
+}
+
+.collections__filter {
+  margin-bottom: 60px;
+}
+
+.collections__filter-results-text {
+  grid-column: 1/-1;
+  padding-top: 25px;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 25px;
+    font-family: $s-font;
+    font-style: normal;
+    font-weight: normal;
+    color: #2c2929;
+    font-size: 18px;
+    line-height: 24px;
+
+    @media ($tablet) {
+      font-size: 20px;
+      line-height: 22px;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+
+    @media ($tablet) {
+      font-size: 17px;
+      line-height: 30px;
+    }
+  }
+
+  a {
+    color: $links-color;
+    text-decoration: underline;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    tr {
+      td {
+        &:first-child {
+          min-width: 140px;
+          font-family: $s-font;
+          font-style: normal;
+          font-weight: normal;
+          color: #937b65;
+          font-size: 15px;
+          line-height: 24px;
+
+          @media ($tablet) {
+            min-width: 177px;
+            font-size: 18px;
+            line-height: 30px;
+          }
+
+          p {
+            font-weight: 400;
+          }
+
+          + td {
+            padding-left: 28px;
+            font-size: 15px;
+            line-height: 24px;
+
+            @media ($tablet) {
+              font-size: 17px;
+              line-height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media ($tablet) {
+    grid-column: 6 / span 7;
+    padding-left: 50px;
+    padding-top: 0;
+
+    h2 {
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+}

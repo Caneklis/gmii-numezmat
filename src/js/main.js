@@ -419,4 +419,66 @@ document.addEventListener("DOMContentLoaded", () => {
     sliderTop.controller.control = sliderThumbs;
     sliderThumbs.controller.control = sliderTop;
   });
+
+  $(".filter__form__custom-select").each(function () {
+    var classes = $(this).attr("class"),
+      id = $(this).attr("id"),
+      name = $(this).attr("name");
+    var template = '<div class="' + classes + '">';
+    template +=
+      '<span class="filter__form__custom-select-trigger">' +
+      $(this).attr("data-placeholder") +
+      "</span>";
+    template += '<div class="filter__form__custom-options">';
+    $(this)
+      .find("option")
+      .each(function () {
+        template +=
+          '<span class="filter__form__custom-option ' +
+          $(this).attr("class") +
+          '" data-value="' +
+          $(this).attr("value") +
+          '">' +
+          $(this).html() +
+          "</span>";
+      });
+    template += "</div></div>";
+
+    $(this).wrap('<div class="filter__form__custom-select-wrapper"></div>');
+    $(this).hide();
+    $(this).after(template);
+  });
+  $(".filter__form__custom-option:first-of-type").hover(
+    function () {
+      $(this).parents(".filter__form__custom-options").addClass("option-hover");
+    },
+    function () {
+      $(this)
+        .parents(".filter__form__custom-options")
+        .removeClass("option-hover");
+    }
+  );
+  $(".filter__form__custom-select-trigger").on("click", function () {
+    $("html").one("click", function () {
+      $(".filter__form__custom-select").removeClass("opened");
+    });
+    $(this).parents(".filter__form__custom-select").toggleClass("opened");
+    event.stopPropagation();
+  });
+  $(".filter__form__custom-option").on("click", function () {
+    $(this)
+      .parents(".filter__form__custom-select-wrapper")
+      .find("select")
+      .val($(this).data("value"));
+    $(this)
+      .parents(".filter__form__custom-options")
+      .find(".filter__form__custom-option")
+      .removeClass("selection");
+    $(this).addClass("selection");
+    $(this).parents(".filter__form__custom-select").removeClass("opened");
+    $(this)
+      .parents(".filter__form__custom-select")
+      .find(".filter__form__custom-select-trigger")
+      .text($(this).text());
+  });
 });
