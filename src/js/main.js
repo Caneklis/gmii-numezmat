@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           let x = e.offsetX;
 
-          console.log(x);
+          // console.log(x);
           const style = `-webkit-linear-gradient(
         45deg,
         rgba(200, 193, 188, 1) ${e.offsetX / e.offsetY}%,
