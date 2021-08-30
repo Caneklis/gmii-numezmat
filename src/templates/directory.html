@@ -1,0 +1,140 @@
+---
+title: Справочник типовой
+description: Description test
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "./partials/_breadcrumbs.html" %}
+
+<section class="directory">
+  <div class="directory__wrapper  tab-section">
+    <div class="directory__head">
+      <h1 class="directory__title">Топографический справочник</h1>
+
+      <div class="directory__head-text">
+        <p>В указателе в алфавитном порядке приводятся названия стран, исторических провинций, областей, графств,
+          городов, рек, портов, мостов, улиц, проспектов, площадей, набережных, парков, садов, архитектурных сооружений,
+          транспортных магистралей.</p>
+      </div>
+      <ul class="directory__alphabet-list">
+        <li class="directory__alphabet-filter"><a href="#">А</a></li>
+        <li class="directory__alphabet-filter"><a href="#">Б</a></li>
+        <li class="directory__alphabet-filter"><a href="#">В</a></li>
+        <li class="directory__alphabet-filter"><a href="#">Г</a></li>
+        <li class="directory__alphabet-filter"><a href="#">Д</a></li>
+        <li class="directory__alphabet-filter"><a href="#">Е</a></li>
+        <li class="directory__alphabet-filter"><a href="#">Ж</a></li>
+        <li class="directory__alphabet-filter"><a href="#">З</a></li>
+        <li class="directory__alphabet-filter"><a href="#">И</a></li>
+        <li class="directory__alphabet-filter"><a href="#">Й</a></li>
+        <li class="directory__alphabet-filter"><a href="#">К</a></li>
+        <li class="directory__alphabet-filter"><a href="#">Л</a></li>
+        <li class="directory__alphabet-filter"><a href="#">М</a></li>
+        <li class="directory__alphabet-filter"><a href="#">Н</a></li>
+        <li class="directory__alphabet-filter"><a href="#">О</a></li>
+        <li class="directory__alphabet-filter"><a href="#">П</a></li>
+        <li class="directory__alphabet-filter"><a href="#">Р</a></li>
+        <li class="directory__alphabet-filter"><a href="#">С</a></li>
+        <li class="directory__alphabet-filter"><a href="#">Т</a></li>
+        <li class="directory__alphabet-filter"><a href="#">У</a></li>
+        <li class="directory__alphabet-filter"><a href="#">Ф</a></li>
+        <li class="directory__alphabet-filter"><a href="#">Х</a></li>
+        <li class="directory__alphabet-filter"><a href="#">Ц</a></li>
+        <li class="directory__alphabet-filter"><a href="#">Ч</a></li>
+        <li class="directory__alphabet-filter"><a href="#">Ш</a></li>
+        <li class="directory__alphabet-filter"><a href="#">Щ</a></li>
+        <li class="directory__alphabet-filter"><a href="#">Э</a></li>
+        <li class="directory__alphabet-filter"><a href="#">Ю</a></li>
+        <li class="directory__alphabet-filter"><a href="#">Я</a></li>
+      </ul>
+      <div class="directory__switcher-type">
+        <button class="directory__switcher-btn  directory__switcher-btn--category  directory__switcher-btn--active"
+          type="button">показать
+          категории</button>
+        <button class="directory__switcher-btn  directory__switcher-btn--alphabet" type="button">показать
+          алфавитом</button>
+      </div>
+    </div>
+
+    <ul class="directory__alphabet-main-list">
+      <li class="directory__main-list-item">
+        <div class="directory__initial  directory__initial--letter">
+          А
+        </div>
+        <ul class="directory__initial-list">
+          <li class="directory__initial-item"><a href="#">АБО (ТУРКУ)</a></li>
+          <li class="directory__initial-item"><a href="#">АЗОВ</a></li>
+          <li class="directory__initial-item"><a href="#">АЛАНДСКИЕ ОСТРОВА</a></li>
+          <li class="directory__initial-item"><a href="#">АЛЬТРАНШТАДТ</a></li>
+          <li class="directory__initial-item"><a href="#">АРЕНСБУРГ</a></li>
+        </ul>
+      </li>
+      <li class="directory__main-list-item  directory__main-list-item">
+        <div class="directory__initial  directory__initial--letter">
+          Б
+        </div>
+        <ul class="directory__initial-list">
+          <li class="directory__initial-item"><a href="#">БАЛТИЙСКОЕ МОРЕ</a></li>
+          <li class="directory__initial-item"><a href="#">БЕЛАЯ РОССИЯ</a></li>
+          <li class="directory__initial-item"><a href="#">БЕНДЕРЫ (ТИГИНА)</a></li>
+          <li class="directory__initial-item"><a href="#">БОЛДЕР-АА</a></li>
+          <li class="directory__initial-item"><a href="#">БОРНГОЛЬМ</a></li>
+        </ul>
+      </li>
+      <li class="directory__main-list-item  directory__main-list-item">
+        <div class="directory__initial  directory__initial--letter">
+          В
+        </div>
+        <ul class="directory__initial-list">
+          <li class="directory__initial-item"><a href="#">ВАРШАВА</a></li>
+          <li class="directory__initial-item"><a href="#">ВАСА (ВААСА)</a></li>
+          <li class="directory__initial-item"><a href="#">ВУОКСА</a></li>
+          <li class="directory__initial-item"><a href="#">ВЫБОРГ</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="directory__category-main-list  directory__category-main-list--hide">
+      <li class="directory__main-list-item  directory__main-list-item--category">
+        <div class="directory__initial  directory__initial--word">
+          Города
+        </div>
+        <ul class="directory__initial-list  directory__initial-list--category">
+          <li class="directory__initial-item"><a href="#">АБО (ТУРКУ)</a></li>
+          <li class="directory__initial-item"><a href="#">АЗОВ</a></li>
+          <li class="directory__initial-item"><a href="#">АЛАНДСКИЕ ОСТРОВА</a></li>
+          <li class="directory__initial-item"><a href="#">АЛЬТРАНШТАДТ</a></li>
+          <li class="directory__initial-item"><a href="#">АРЕНСБУРГ</a></li>
+        </ul>
+      </li>
+      <li class="directory__main-list-item  directory__main-list-item--category">
+        <div class="directory__initial  directory__initial--word">
+          Деревни,<br> села
+        </div>
+        <ul class="directory__initial-list  directory__initial-list--category">
+          <li class="directory__initial-item"><a href="">Альтранштадт</a></li>
+          <li class="directory__initial-item"><a href="#">Лесная</a></li>
+          <li class="directory__initial-item"><a href="#">Переволочна</a></li>
+          <li class="directory__initial-item"><a href="#">Рисвик</a></li>
+          <li class="directory__initial-item"><a href="#">Рисвик</a></li>
+        </ul>
+      </li>
+      <li class="directory__main-list-item  directory__main-list-item--category">
+        <div class="directory__initial  directory__initial--word">
+          Заливы
+        </div>
+        <ul class="directory__initial-list  directory__initial-list--category">
+          <li class="directory__initial-item"><a href="">ВАРШАВА</a></li>
+          <li class="directory__initial-item"><a href="">ВАСА (ВААСА)</a></li>
+          <li class="directory__initial-item"><a href="">ВУОКСА</a></li>
+          <li class="directory__initial-item"><a href="">ВЫБОРГ</a></li>
+        </ul>
+      </li>
+    </ul>
+
+  </div>
+</section>
+
+{% endblock %}

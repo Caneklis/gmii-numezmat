@@ -420,6 +420,34 @@ document.addEventListener("DOMContentLoaded", () => {
     sliderThumbs.controller.control = sliderTop;
   });
 
+  const catalogDirectoryBtn = document.querySelector(
+    ".directory__switcher-btn--category"
+  );
+  const catalogAlphabetBtn = document.querySelector(
+    ".directory__switcher-btn--alphabet"
+  );
+  const alphabetFilterList = document.querySelector(
+    ".directory__alphabet-list"
+  );
+  const alphabetList = document.querySelector(".directory__alphabet-main-list");
+  const categoryList = document.querySelector(".directory__category-main-list");
+
+  catalogDirectoryBtn.addEventListener("click", () => {
+    catalogDirectoryBtn.classList.remove("directory__switcher-btn--active");
+    catalogAlphabetBtn.classList.add("directory__switcher-btn--active");
+    alphabetFilterList.classList.add("directory__alphabet-list--hide");
+    alphabetList.classList.add("directory__alphabet-main-list--hide");
+    categoryList.classList.remove("directory__category-main-list--hide");
+  });
+
+  catalogAlphabetBtn.addEventListener("click", () => {
+    catalogAlphabetBtn.classList.remove("directory__switcher-btn--active");
+    catalogDirectoryBtn.classList.add("directory__switcher-btn--active");
+    alphabetFilterList.classList.remove("directory__alphabet-list--hide");
+    alphabetList.classList.remove("directory__alphabet-main-list--hide");
+    categoryList.classList.add("directory__category-main-list--hide");
+  });
+
   $(".filter__form__custom-select").each(function () {
     var classes = $(this).attr("class"),
       id = $(this).attr("id"),
