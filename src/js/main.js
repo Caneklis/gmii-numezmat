@@ -4,6 +4,7 @@ window.$ = $;
 import Swiper from "swiper/bundle";
 import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui";
 require("./modules/bvi");
+require("./theta-carousel.min");
 
 document.addEventListener("DOMContentLoaded", () => {
   require("./modules/main-nav");
@@ -147,43 +148,17 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  const collectionFavorites = new Swiper(
-    ".main-page-collection__favorites-slider",
-    {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      initialSlide: 2,
-      slidesPerView: 5,
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 150,
-        depth: 200,
-        modifier: 3,
-        slideShadows: false,
-      },
+  const collectionFavorites = new Swiper(".main-collection__swiper-slider", {
+    grabCursor: true,
+    centeredSlides: true,
+    initialSlide: 1,
+    slidesPerView: 1,
 
-      on: {
-        slideChange: function () {
-          var activeIndex = this.activeIndex;
-          var realIndex = this.slides
-            .eq(activeIndex)
-            .attr("data-swiper-slide-index");
-          $(".swiper-slide").removeClass(
-            "swiper-slide-prev-2 swiper-slide-next-2"
-          );
-          $('.swiper-slide[data-swiper-slide-index="' + realIndex + '"]')
-            .prev()
-            .prev()
-            .addClass("swiper-slide-prev-2");
-          $('.swiper-slide[data-swiper-slide-index="' + realIndex + '"]')
-            .next()
-            .next()
-            .addClass("swiper-slide-next-2");
-        },
-      },
-    }
-  );
+    navigation: {
+      nextEl: ".main-collection__swiper-slider-button--next",
+      prevEl: ".main-collection__swiper-slider-button--prev",
+    },
+  });
 
   // (function () {
   //   "use strict";
@@ -432,21 +407,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const alphabetList = document.querySelector(".directory__alphabet-main-list");
   const categoryList = document.querySelector(".directory__category-main-list");
 
-  catalogDirectoryBtn.addEventListener("click", () => {
-    catalogDirectoryBtn.classList.remove("directory__switcher-btn--active");
-    catalogAlphabetBtn.classList.add("directory__switcher-btn--active");
-    alphabetFilterList.classList.add("directory__alphabet-list--hide");
-    alphabetList.classList.add("directory__alphabet-main-list--hide");
-    categoryList.classList.remove("directory__category-main-list--hide");
-  });
+  if (catalogDirectoryBtn) {
+    catalogDirectoryBtn.addEventListener("click", () => {
+      catalogDirectoryBtn.classList.remove("directory__switcher-btn--active");
+      catalogAlphabetBtn.classList.add("directory__switcher-btn--active");
+      alphabetFilterList.classList.add("directory__alphabet-list--hide");
+      alphabetList.classList.add("directory__alphabet-main-list--hide");
+      categoryList.classList.remove("directory__category-main-list--hide");
+    });
+  }
 
-  catalogAlphabetBtn.addEventListener("click", () => {
-    catalogAlphabetBtn.classList.remove("directory__switcher-btn--active");
-    catalogDirectoryBtn.classList.add("directory__switcher-btn--active");
-    alphabetFilterList.classList.remove("directory__alphabet-list--hide");
-    alphabetList.classList.remove("directory__alphabet-main-list--hide");
-    categoryList.classList.add("directory__category-main-list--hide");
-  });
+  if (catalogAlphabetBtn) {
+    catalogAlphabetBtn.addEventListener("click", () => {
+      catalogAlphabetBtn.classList.remove("directory__switcher-btn--active");
+      catalogDirectoryBtn.classList.add("directory__switcher-btn--active");
+      alphabetFilterList.classList.remove("directory__alphabet-list--hide");
+      alphabetList.classList.remove("directory__alphabet-main-list--hide");
+      categoryList.classList.add("directory__category-main-list--hide");
+    });
+  }
 
   $(".filter__form__custom-select").each(function () {
     var classes = $(this).attr("class"),
@@ -508,5 +487,106 @@ document.addEventListener("DOMContentLoaded", () => {
       .parents(".filter__form__custom-select")
       .find(".filter__form__custom-select-trigger")
       .text($(this).text());
+  });
+
+  function carouselCreated(e, data) {
+    var z = {
+      z: -5500,
+    };
+    $(z).animate(
+      {
+        z: -1450,
+      },
+      {
+        easing: "easeOutQuad",
+        duration: 1000,
+        step: function (val) {
+          if (isNaN(val)) return; //for some easings we can get NaNs
+          $(".theta-carousel").theta_carousel({
+            "path.settings.shiftZ": val,
+          });
+        },
+      }
+    );
+  }
+  var container = $("#container");
+
+  // // fade in effect
+  // container.css({
+  //   opacity: 0,
+  // });
+  // container.delay(500).animate(
+  //   {
+  //     opacity: 1,
+  //   },
+  //   500
+  // );
+
+  container.theta_carousel({
+    filter: ".ex-item",
+    selectedIndex: 0,
+    distance: 30,
+    designedForWidth: 940,
+    designedForHeight: 434,
+    distanceInFallbackMode: 300,
+    scaleX: 1.7,
+    scaleY: 1.9,
+    scaleZ: 1.2,
+    path: {
+      settings: {
+        shiftY: 849,
+        shiftZ: -5500,
+        rotationAngleZY: 54,
+        a: 833,
+        b: 835,
+        endless: true,
+      },
+      type: "ellipse",
+    },
+    perspective: 900,
+    sensitivity: 0.2,
+    fadeAway: true,
+    fadeAwayBezierPoints: {
+      p1: {
+        x: 140,
+        y: 100,
+      },
+      p2: {
+        x: 41,
+        y: 67,
+      },
+      p3: {
+        x: 45,
+        y: 67,
+      },
+      p4: {
+        x: 100,
+        y: 33,
+      },
+    },
+    sizeAdjustment: true,
+    sizeAdjustmentNumberOfConfigurableElements: 5,
+    sizeAdjustmentBezierPoints: {
+      p1: {
+        x: 0,
+        y: 200,
+      },
+      p2: {
+        x: 1,
+        y: 61,
+      },
+      p3: {
+        x: 5,
+        y: 72,
+      },
+      p4: {
+        x: 100,
+        y: 72,
+      },
+    },
+    reflection: false,
+  });
+  carouselCreated.call(container, null, {
+    index: container.theta_carousel("option", "selectedIndex"),
   });
 });
