@@ -63,6 +63,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 25px;
   margin-bottom: 45px;
 
   img {
@@ -79,6 +80,7 @@
 
   @media ($desktop) {
     margin-bottom: 140px;
+    column-gap: 100px;
   }
 }
 
@@ -92,8 +94,8 @@
     tr {
       td {
         vertical-align: top;
-        padding-left: 27px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
         padding-top: 16px;
         padding-bottom: 10px;
         font-weight: 500;
@@ -165,8 +167,10 @@
     table {
       tr {
         td {
-          padding-left: 60px;
-          padding-bottom: 42px;
+          @media ($desktop) {
+            padding-left: 60px;
+            padding-bottom: 42px;
+          }
 
           &:first-child {
             margin-left: 0;
@@ -365,7 +369,11 @@
     font-weight: normal;
     font-size: 34px;
     line-height: 30px;
-    text-decoration-line: underline;
+
+    a {
+      text-decoration: underline;
+      color: inherit;
+    }
   }
 
   p {
@@ -378,6 +386,16 @@
   a {
     color: $links-color;
     text-decoration: underline;
+  }
+
+  ul {
+    @include list-reset;
+
+    a {
+      font-size: 15px;
+      line-height: 30px;
+      color: #b15a25;
+    }
   }
 
   @media ($desktop) {
@@ -535,6 +553,16 @@
       font-size: 20px;
       line-height: 22px;
     }
+
+    a {
+      color: inherit;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #b15a25;
+        text-decoration: underline;
+      }
+    }
   }
 
   p {
@@ -559,6 +587,8 @@
     border-collapse: collapse;
 
     tr {
+      display: grid;
+
       td {
         &:first-child {
           min-width: 140px;
@@ -570,7 +600,7 @@
           line-height: 24px;
 
           @media ($tablet) {
-            min-width: 177px;
+            max-width: 177px;
             font-size: 18px;
             line-height: 30px;
           }
@@ -589,6 +619,22 @@
               line-height: 30px;
             }
           }
+        }
+      }
+    }
+
+    @media ($desktop) {
+      tr {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+
+        td {
+          // flex-grow: 1;
+
+          // &:first-child {
+          //   flex-basis: 180px;
+          //   flex-grow: 0;
+          // }
         }
       }
     }

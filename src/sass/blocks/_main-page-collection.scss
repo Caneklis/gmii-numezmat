@@ -99,22 +99,18 @@
 }
 
 .main-page-collection__show-more-link {
-  display: none;
+  margin-bottom: 20px;
+  color: #fff;
+  text-decoration: underline;
+  text-transform: uppercase;
 
   @media ($tablet) {
     grid-column: 2/3;
-    display: block;
+    margin-bottom: 0;
     font-weight: 600;
     font-size: 18px;
     line-height: 30px;
-    /* or 167% */
-
     text-align: right;
-    text-decoration-line: underline;
-    text-transform: uppercase;
-
-    /* Цвет меню */
-
     color: #b65a23;
   }
 }

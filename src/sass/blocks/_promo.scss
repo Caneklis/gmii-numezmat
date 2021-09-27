@@ -8,11 +8,13 @@
 
 .promo__wrapper {
   @include wrapper;
+  padding-bottom: 20px;
 
   @media ($desktop) {
     margin-top: -515px;
     display: grid;
     grid-template-columns: 1fr 3fr;
+    padding-bottom: 0;
   }
 }
 
@@ -34,7 +36,20 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
+  br {
+    display: none;
+  }
+
+  @media ($tablet) {
+    display: none;
+  }
+
   @media ($desktop) {
+    display: block;
+
+    br {
+      display: block;
+    }
     // max-width: 60%;
     grid-column: 1/-1;
     position: relative;
@@ -54,6 +69,10 @@
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  @media (max-width: 413px) {
+    font-size: 22px;
   }
 }
 
@@ -85,6 +104,10 @@
   position: relative;
   z-index: 1;
   display: none;
+
+  @media ($tablet) {
+    display: block;
+  }
 
   @media ($desktop) {
     display: block;

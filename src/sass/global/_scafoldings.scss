@@ -77,3 +77,8 @@ body {
 body.bvi-active {
   margin: 0 auto;
 }
+
+.fancybox__thumbs .carousel__slide .fancybox__thumb::after {
+  border-color: $s-color;
+  border-width: 2px;
+}

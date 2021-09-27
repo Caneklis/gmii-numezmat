@@ -1,4 +1,7 @@
 .error-page {
+  @media ($desktop) {
+    padding-bottom: 450px;
+  }
 }
 
 .error-page__wrapper {
@@ -38,5 +41,9 @@
     /* Цвет ссылки в тексте */
 
     color: #b15a25;
+  }
+
+  @media ($desktop) {
+    min-height: 885px;
   }
 }
