@@ -27,11 +27,13 @@
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   align-items: flex-start;
+  margin-bottom: 35px;
 
   @media ($tablet) {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 28px;
     row-gap: 45px;
+    margin-bottom: 0;
   }
 }
 

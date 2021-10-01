@@ -16,7 +16,7 @@ description: Description test
         <div class="department__person-slider  swiper-container">
           <div class="swiper-button-prev"></div>
           <div class="swiper-wrapper">
-            {% for item in range(0, 5) -%}
+            {% for item in range(1, 6) -%}
             <div class="department__person-slide  swiper-slide">
               <a class="department__person-popup-link" href="https://lipsum.app/id/1/1024x768" data-fancybox="gallery"
                 data-caption="Описание фото для всплывающего окна если надо">
@@ -31,7 +31,7 @@ description: Description test
 
         <div class="department__person-slider-thumbs  swiper-container">
           <div class="swiper-wrapper">
-            {% for item in range(0, 5) -%}
+            {% for item in range(1, 6) -%}
             <div class="department__person-slide-thumb  swiper-slide">
               <img src="//via.placeholder.com/85x85/?text={{item}}" loading="lazy" width="85" height="85"
                 alt="Описание фото">

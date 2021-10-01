@@ -70,11 +70,12 @@
     font-weight: normal;
     font-size: 34px;
     line-height: 45px;
-    /* or 132% */
-
-    /* Цвет подзаголовков */
-
     color: #2c2929;
+
+    @media (max-width: 767px) {
+      font-size: 17px;
+      line-height: 22px;
+    }
   }
 
   p {
@@ -91,6 +92,11 @@
       color: $links-color;
       text-decoration: underline;
     }
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 30px;
+    padding-left: 5%;
   }
 }
 

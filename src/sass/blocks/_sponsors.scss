@@ -154,6 +154,11 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 30px;
+
+    @media (max-width: 767px) {
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
   }
 
   p {

@@ -160,6 +160,22 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
+  const personsSlider = new Swiper(".department__header-slider", {
+    grabCursor: true,
+    centeredSlides: true,
+    initialSlide: 1,
+    slidesPerView: 1,
+    pagination: {
+      el: ".department__header-slider-pagination",
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: ".department__header-slider-next",
+      prevEl: ".department__header-slider-prev",
+    },
+  });
+
   // (function () {
   //   "use strict";
 
@@ -361,14 +377,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const sliderTop = new Swiper(
       element.querySelector(".department__person-slider"),
       {
+        initialSlide: 0,
         spaceBetween: 0,
         slidesPerView: 1,
-        centeredSlides: true,
+        centeredSlides: false,
+        loop: true,
         navigation: {
           nextEl: element.querySelector(".swiper-button-next"),
           prevEl: element.querySelector(".swiper-button-prev"),
         },
-        loop: false,
         autoHeight: false,
         thumbs: {
           swiper: sliderTop,
@@ -379,16 +396,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const sliderThumbs = new Swiper(
       element.querySelector(".department__person-slider-thumbs"),
       {
-        slidesPerView: 5,
+        initialSlide: 0,
+        slidesPerView: "auto",
         spaceBetween: 17,
         slideToClickedSlide: true,
-        loop: false,
         autoHeight: false,
-        centeredSlides: true,
+        centeredSlides: false,
         pagination: {
           el: element.querySelector(".swiper-pagination"),
           clickable: true,
         },
+        loop: true,
       }
     );
     sliderTop.controller.control = sliderThumbs;

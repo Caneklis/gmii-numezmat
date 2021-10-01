@@ -1,0 +1,109 @@
+---
+title: Отдел
+description: Description test
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<section class="department">
+  <div class="department__wrapper">
+    <header class="department__header">
+      <h1 class="department__header-title">ОТДЕЛ</h1>
+      <ul class="department__header-list">
+        <li class="department__header-list-item"><a href="#">История</a></li>
+        <li class="department__header-list-item"><a href="#">Публикации</a></li>
+        <li class="department__header-list-item"><a href="#">Выставки</a></li>
+        <li class="department__header-list-item"><a href="#">Лекторий</a></li>
+        <li class="department__header-list-item"><a href="#">Детские занятия</a></li>
+        <li class="department__header-list-item"><a href="#">Международная деятельность</a></li>
+        <li class="department__header-list-item"><a href="#">Медиа</a></li>
+        <li class="department__header-list-item"><a href="#">Полезные ресурсы</a></li>
+      </ul>
+      <div class="department__header-right">
+        <div class="department__header-slider  swiper-container">
+          <div class="swiper-wrapper">
+            {% for item in range(0, 5) -%}
+            <div class="swiper-slide">
+              <img src="//via.placeholder.com/955x375/" loading="lazy" alt="Описание фото">
+            </div>
+            {%- endfor %}
+          </div>
+        </div>
+        <button class="department__header-slider-prev" type="button">
+          <svg width="15" height="26" viewBox="0 0 15 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.8984 1.00005L1.99844 12.9001L13.8984 24.8" stroke="#D18E48" stroke-width="2"
+              stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <div class="department__header-slider-pagination"></div>
+        <button class="department__header-slider-next" type="button">
+          <svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 24.8L12.9 12.9L1 1" stroke="#D18E48" stroke-width="2" stroke-miterlimit="10"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+
+    </header>
+
+    <div class="department__main-content">
+      <div class="department__main-content-left">
+        <div class="department__main-content-pic">
+          <figure>
+            <!-- Тут нужна ссылка или попап? Или ничего? -->
+            <img src="//via.placeholder.com/360x360/" loading="lazy" alt="Описание фото">
+            <figcaption>
+              <p>Медаль на открытие Музея изящных искусств в 1912 году</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="department__main-content-right  department__main-content-text">
+        <p>Современный отдел нумизматики ГМИИ им. А.С. Пушкина - это коллекция, превышающая 200 тысяч предметов и 3
+          тысячи томов специальной библиотеки. В отделе работает коллектив сотрудников, специализирующихся в разных
+          областях нумизматики. Основными направлениями деятельности хранителей являются формирование и хранение
+          музейной коллекции, ее изучение, планомерное издание и экспонирование как отдельных памятников, так и целых
+          разделов. </p>
+
+        <p>Нумизматическая коллекция Музея имени А.С.Пушкина справедливо считается одной из лучших среди российских и
+          зарубежных государственных собраний монет и медалей, насчитывая почти два с половиной столетия собственной
+          истории. </p>
+
+        <p>Историю отдела во многом определили участие и судьбы многих людей. Это профессора и покровители университета,
+          ученые и музейные хранители, а также коллекционеры, среди которых были как крупные меценаты, чьи дары
+          принципиально меняли не только количественный, но и качественный состав коллекции, так и люди, жертвовавшие
+          университету отдельные вещи, тем более ценные, что дарились они искренне. </p>
+
+        <p>Все предметы коллекции - от самых ранних греческих монет VI века до н.э. и до современных медалей и значков -
+          объединяет то, что они, представляя памятники разных эпох, были сохранены для нас благодаря труду многих
+          поколений музейных хранителей.</p>
+
+        <p><a href="#">история отдела</a></p>
+      </div>
+    </div>
+
+    <div class="department__persons">
+      <ul class="department__persons-list">
+        {% for item in range(0, 6) -%}
+        <li class="department__persons-list-item">
+          <div class="department__persons-list-item-photo">
+            <img src="//via.placeholder.com/280x280/" loading="lazy" alt="Описание фото">
+          </div>
+          <h3><a href="#">Коваленко Сергей Анатольевич</a></h3>
+          <p>заведующий отделом</p>
+        </li>
+        {%- endfor %}
+      </ul>
+
+      <div class="department__persons-contacts">
+        <h3>Контакты</h3>
+        <p>+7 (495) 697 7414</p>
+        <p><a href="mailto:numismatics@arts-museum.ru">numismatics@arts-museum.ru</a></p>
+        <a class="department__persons-contacts-feedback" href="#">Форма обратной связи</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
