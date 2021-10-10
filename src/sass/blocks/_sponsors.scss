@@ -6,8 +6,10 @@
 
 .sponsors__title {
   @include main-title;
+  margin-bottom: 35px;
 
   @media ($tablet) {
+    margin-bottom: 0;
     grid-column: 1/-1;
   }
 }
@@ -113,11 +115,17 @@
 
 .sponosors__list-title {
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 35px;
   font-family: $s-font;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 22px;
+  line-height: 25px;
+
+  @media ($tablet) {
+    margin-bottom: 60px;
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
 
 .sponsors__logo {
@@ -126,12 +134,14 @@
     margin-bottom: 25px;
     font-family: $s-font;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 22px;
+    line-height: 25px;
     color: #d18e48;
 
-    @media ($desktop) {
+    @media ($tablet) {
       margin-bottom: 57px;
+      font-size: 24px;
+      line-height: 30px;
     }
   }
 

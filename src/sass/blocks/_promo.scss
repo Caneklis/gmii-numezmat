@@ -1,7 +1,9 @@
 .promo {
+  display: none;
   background-color: #f3f1ef;
 
   @media ($tablet) {
+    display: grid;
     background-color: #fff;
   }
 }

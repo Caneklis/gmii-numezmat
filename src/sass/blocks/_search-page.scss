@@ -60,6 +60,13 @@
   grid-column: 1/2;
   grid-row: 3/4;
   min-width: 243px;
+  margin-bottom: 35px;
+  padding-top: 25px;
+
+  @media ($tablet) {
+    margin-bottom: 0;
+    padding-top: 0;
+  }
 }
 
 .saerch-page__categories-item {
@@ -78,6 +85,11 @@
   grid-column: 2/3;
   grid-row: 2/3;
   font-family: $s-font;
+  margin-bottom: 35px;
+
+  @media ($tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .search-page__request-text {
