@@ -1,5 +1,6 @@
 .subscribe__title {
   margin: 0;
+  margin-bottom: 30px;
   font-family: $s-font;
   font-weight: 400;
   font-size: 24px;
@@ -97,5 +98,21 @@
   &:hover {
     color: #e7a45e;
     background-color: #fff;
+  }
+}
+
+.subscribe__link {
+  font-family: $s-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #b65a23;
   }
 }

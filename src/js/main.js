@@ -31,6 +31,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  const yearsBtn = document.querySelector(".years-toggle");
+
+  if (yearsBtn) {
+    yearsBtn.addEventListener("click", () => {
+      yearsBtn.nextElementSibling.classList.toggle("years-list--active");
+    });
+  }
+
   // let currentMousePos = { x: -1, y: -1 };
   // let flesh = document.querySelector('#flesh');
   // flesh.addEventListener('onmousemove', function(e) {

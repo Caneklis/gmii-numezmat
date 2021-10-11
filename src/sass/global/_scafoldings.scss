@@ -82,3 +82,16 @@ body.bvi-active {
   border-color: $s-color;
   border-width: 2px;
 }
+
+.years-toggle {
+  @media (max-width: 767px) {
+    position: relative;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+
+    &::after {
+      content: url("../images/sprite/menu.svg");
+      margin-left: auto;
+    }
+  }
+}
