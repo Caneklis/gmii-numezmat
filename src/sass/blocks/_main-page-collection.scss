@@ -33,11 +33,16 @@
 }
 
 .main-page-collection__item-of-the-month {
-  display: none;
+  padding: 25px 5.5% 0 6%;
+
+  .main-page-collection__title {
+    color: $b-color;
+  }
 
   @media ($desktop) {
     display: flex;
     flex-direction: column;
+    padding: 0;
   }
 }
 

@@ -360,11 +360,12 @@
 }
 
 .collections__slider-item-text {
+  margin-bottom: 35px;
   color: #2c2929;
 
   h3 {
     margin: 0;
-    margin-bottom: 70px;
+    margin-bottom: 35px;
     font-family: $s-font;
     font-weight: normal;
     font-size: 34px;
@@ -373,6 +374,10 @@
     a {
       text-decoration: underline;
       color: inherit;
+    }
+
+    @media ($tablet) {
+      margin-bottom: 70px;
     }
   }
 
@@ -396,6 +401,10 @@
       line-height: 30px;
       color: #b15a25;
     }
+  }
+
+  @media ($tablet) {
+    margin-bottom: 0;
   }
 
   @media ($desktop) {

@@ -1,6 +1,6 @@
 .promo {
-  display: none;
-  background-color: #f3f1ef;
+  // display: none;
+  // background-color: #f3f1ef;
 
   @media ($tablet) {
     display: grid;
@@ -11,16 +11,25 @@
 .promo__wrapper {
   @include wrapper;
   padding-bottom: 20px;
+  display: grid;
+
+  @media ($tablet) {
+    grid-template-columns: 1fr 3fr;
+    column-gap: 20px;
+    padding-top: 35px;
+  }
 
   @media ($desktop) {
     margin-top: -515px;
-    display: grid;
     grid-template-columns: 1fr 3fr;
+    column-gap: 0;
     padding-bottom: 0;
+    padding-top: 0;
   }
 }
 
 .promo__title {
+  display: none;
   margin: 0;
   font-weight: 500;
   font-size: 27px;
@@ -79,12 +88,15 @@
 }
 
 .promo__text {
-  display: none;
+  // display: none;
   position: relative;
   z-index: 2;
-  margin-top: 55px;
   padding-top: 28px;
   background-color: #fff;
+
+  img {
+    margin: 0 auto;
+  }
 
   p {
     max-width: 270px;
@@ -99,20 +111,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 55px;
+
+    img {
+      margin: 0;
+    }
   }
 }
 
 .promo__media {
   position: relative;
   z-index: 1;
-  display: none;
+  margin-top: 20px;
 
   @media ($tablet) {
-    display: block;
+    margin-top: 0;
   }
 
   @media ($desktop) {
-    display: block;
     margin-top: -60px;
   }
 }
