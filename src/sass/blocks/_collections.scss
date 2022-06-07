@@ -215,7 +215,7 @@
   @media ($tablet) {
     display: grid;
     grid-template-columns: repeat(12, [col] 1fr);
-    grid-gap: 20px;
+    gap: 20px;
   }
 }
 
@@ -261,7 +261,7 @@
   @media ($tablet) {
     display: grid;
     grid-template-columns: repeat(12, [col] 1fr);
-    grid-gap: 20px;
+    gap: 20px;
     align-items: flex-start;
     margin-bottom: 98px;
   }
@@ -442,7 +442,7 @@
   @media ($tablet) {
     display: grid;
     grid-template-columns: repeat(12, [col] 1fr);
-    grid-gap: 20px;
+    gap: 20px;
     align-items: flex-start;
   }
 }
@@ -485,7 +485,7 @@
   @include list-reset;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  gap: 20px;
 
   @media ($tablet) {
     grid-template-columns: 1fr 1fr 1fr;
@@ -514,7 +514,7 @@
 
   @media ($tablet) {
     grid-template-columns: repeat(12, [col] 1fr);
-    grid-gap: 20px;
+    gap: 20px;
     padding: 60px 0;
   }
 }
