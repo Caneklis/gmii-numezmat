@@ -5464,7 +5464,11 @@ body.bvi-active {
 }
 .menu__item:hover .menu__sublist {
   display: block;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
   padding-left: 30px;
+  padding-right: 30px;
   padding-bottom: 10px;
   z-index: 3;
 }
@@ -5475,6 +5479,9 @@ body.bvi-active {
   }
 }
 .menu__item:hover .menu__sublink {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
   -webkit-animation: fadeIn 0.3s ease-in-out 1 forwards;
           animation: fadeIn 0.3s ease-in-out 1 forwards;
 }
@@ -6724,6 +6731,7 @@ body.bvi-active {
   position: relative;
   overflow: hidden;
   width: 100%;
+  margin-bottom: 30px;
   padding-top: 56.25%;
   /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
@@ -8497,6 +8505,9 @@ body.bvi-active {
     font-size: 15px;
     line-height: 30px;
   }
+}
+.sponsors__text a {
+  color: #b65a23;
 }
 
 .glossary__wrapper {
