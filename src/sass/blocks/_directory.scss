@@ -8,7 +8,7 @@
   @media ($tablet) {
     display: grid;
     grid-template-columns: 102px repeat(11, [col] 1fr);
-    gap: 20px;
+    grid-gap: 20px;
     margin-bottom: 72px;
   }
 }

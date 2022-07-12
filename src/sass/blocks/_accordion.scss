@@ -1,0 +1,116 @@
+.typical-accordion .accordion-control {
+  padding: 10px 0;
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  /*line-height: 202%;*/
+  line-height: 1.4;
+  background-color: transparent;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+
+  color: #937b65;
+  border: none;
+}
+.typical-accordion .accordion-control span {
+  display: inline;
+
+  border-bottom: 1px solid transparent;
+}
+.typical-accordion .accordion-control--second-level {
+  font-size: 19px;
+  font-size: 1.1875rem;
+  font-weight: 500;
+  line-height: 147%;
+
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background-color: transparent;
+  border: none;
+
+  color: #515151;
+}
+.typical-accordion .accordion-control--third-level {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 150%;
+
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+
+  color: #515151;
+}
+.typical-accordion .accordion-control--fourth-level {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 150%;
+
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+
+  color: #515151;
+}
+.typical-accordion .accordion-control--third-level:hover {
+  color: #515151;
+}
+.typical-accordion .accordion-control--fourth-level:hover {
+  color: #515151;
+}
+.typical-accordion .accordion.open > .accordion-control,
+.typical-accordion .accordion.open > .accordion-control--second-level {
+  color: #515151;
+}
+
+.typical-accordion .accordion-control--second-level:hover {
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+
+  color: #515151;
+}
+
+.typical-accordion button {
+  text-align: left;
+}
+
+.u-vmenu ul {
+  padding-left: 0;
+}
+
+.u-vmenu ul ul {
+  display: none;
+  list-style: none;
+  padding-left: 30px;
+}
+
+.u-vmenu ul ul ul {
+  display: none;
+
+  padding-top: 0.3rem;
+}
+
+.u-vmenu ul li button[data-option="on"] {
+  color: #515151;
+}
+
+.accordion__text {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 150%;
+
+  padding: 0.5rem 0;
+}
+
+.accordion__padding {
+  padding-top: 17px;
+  padding-bottom: 22px;
+}

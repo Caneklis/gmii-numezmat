@@ -388,8 +388,9 @@ document.addEventListener("DOMContentLoaded", () => {
         initialSlide: 0,
         spaceBetween: 0,
         slidesPerView: 1,
-        centeredSlides: false,
-        loop: true,
+        centeredSlides: true,
+        simulateTouch: true,
+        loop: false,
         navigation: {
           nextEl: element.querySelector(".swiper-button-next"),
           prevEl: element.querySelector(".swiper-button-prev"),
@@ -414,7 +415,8 @@ document.addEventListener("DOMContentLoaded", () => {
           el: element.querySelector(".swiper-pagination"),
           clickable: true,
         },
-        loop: true,
+        loop: false,
+        slideToClickedSlide: true,
       }
     );
     sliderTop.controller.control = sliderThumbs;
@@ -453,67 +455,155 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  $(".filter__form__custom-select").each(function () {
-    var classes = $(this).attr("class"),
-      id = $(this).attr("id"),
-      name = $(this).attr("name");
-    var template = '<div class="' + classes + '">';
-    template +=
-      '<span class="filter__form__custom-select-trigger">' +
-      $(this).attr("data-placeholder") +
-      "</span>";
-    template += '<div class="filter__form__custom-options">';
-    $(this)
-      .find("option")
-      .each(function () {
-        template +=
-          '<span class="filter__form__custom-option ' +
-          $(this).attr("class") +
-          '" data-value="' +
-          $(this).attr("value") +
-          '">' +
-          $(this).html() +
-          "</span>";
-      });
-    template += "</div></div>";
+  // $(".filter__form__custom-select").each(function () {
+  //   var classes = $(this).attr("class"),
+  //     id = $(this).attr("id"),
+  //     name = $(this).attr("name");
+  //   var template = '<div class="' + classes + '">';
+  //   template +=
+  //     '<span class="filter__form__custom-select-trigger">' +
+  //     $(this).attr("data-placeholder") +
+  //     "</span>";
+  //   template += '<div class="filter__form__custom-options">';
+  //   $(this)
+  //     .find("option")
+  //     .each(function () {
+  //       // template +=
+  //       //   '<span class="filter__form__custom-option ' +
+  //       //   $(this).attr("class") +
+  //       //   '" data-value="' +
+  //       //   $(this).attr("value") +
+  //       //   '">' +
+  //       //   $(this).html() +
+  //       //   "</span>";
+  //       template +=
+  //         '<a class="filter__form__custom-option ' +
+  //         $(this).attr("class") +
+  //         'href="' +
+  //         $(this).attr("value") +
+  //         '">' +
+  //         $(this).html() +
+  //         "</a>";
+  //     });
+  //   template += "</div></div>";
 
-    $(this).wrap('<div class="filter__form__custom-select-wrapper"></div>');
-    $(this).hide();
-    $(this).after(template);
-  });
-  $(".filter__form__custom-option:first-of-type").hover(
-    function () {
-      $(this).parents(".filter__form__custom-options").addClass("option-hover");
-    },
-    function () {
-      $(this)
-        .parents(".filter__form__custom-options")
-        .removeClass("option-hover");
+  //   $(this).wrap('<div class="filter__form__custom-select-wrapper"></div>');
+  //   $(this).hide();
+  //   $(this).after(template);
+  // });
+  // $(".filter__form__custom-option:first-of-type").hover(
+  //   function () {
+  //     $(this).parents(".filter__form__custom-options").addClass("option-hover");
+  //   },
+  //   function () {
+  //     $(this)
+  //       .parents(".filter__form__custom-options")
+  //       .removeClass("option-hover");
+  //   }
+  // );
+  // $(".filter__form__custom-select-trigger").on("click", function () {
+  //   $("html").one("click", function () {
+  //     $(".filter__form__custom-select").removeClass("opened");
+  //   });
+  //   $(this).parents(".filter__form__custom-select").toggleClass("opened");
+  //   event.stopPropagation();
+  // });
+  // $(".filter__form__custom-option").on("click", function () {
+  //   $(this)
+  //     .parents(".filter__form__custom-select-wrapper")
+  //     .find("select")
+  //     .val($(this).data("value"));
+  //   $(this)
+  //     .parents(".filter__form__custom-options")
+  //     .find(".filter__form__custom-option")
+  //     .removeClass("selection");
+  //   $(this).addClass("selection");
+  //   $(this).parents(".filter__form__custom-select").removeClass("opened");
+  //   $(this)
+  //     .parents(".filter__form__custom-select")
+  //     .find(".filter__form__custom-select-trigger")
+  //     .text($(this).text());
+  // });
+
+  //аккордеон
+  (function ($) {
+    $.fn.vmenuModule = function (option) {
+      var obj, item;
+      var options = $.extend(
+        {
+          Speed: 220,
+          autostart: true,
+          autohide: 1,
+        },
+        option
+      );
+      obj = $(this);
+
+      item = obj.find("ul").parent("li").children("button");
+      item.attr("data-option", "off");
+
+      item.unbind("click").on("click", function (e) {
+        e.preventDefault();
+        var a = $(this);
+        if (options.autohide) {
+          a.parent()
+            .parent()
+            .find("button[data-option='on']")
+            .parent("li")
+            .children("ul")
+            .slideUp(options.Speed / 1.2, function () {
+              $(this)
+                .parent("li")
+                .children("button")
+                .attr("data-option", "off");
+            });
+        }
+        if (a.attr("data-option") == "off") {
+          a.parent("li")
+            .children("ul")
+            .slideDown(options.Speed, function () {
+              a.attr("data-option", "on");
+            });
+        }
+        if (a.attr("data-option") == "on") {
+          a.attr("data-option", "off");
+          a.parent("li").children("ul").slideUp(options.Speed);
+        }
+      });
+      if (options.autostart) {
+        obj.find("button").each(function () {
+          $(this)
+            .parent("li")
+            .parent("ul")
+            .slideDown(options.Speed, function () {
+              $(this).parent("li").children("button").attr("data-option", "on");
+            });
+        });
+      }
+    };
+  })(jQuery);
+
+  //трансформация списка в аккордион в мобиле
+  function accordion() {
+    var content = $(".accordion--mobile .accordion-content");
+
+    if ($(window).width() < 1024) {
+      $(".js-accordion--mobile").vmenuModule({
+        Speed: 400,
+        autostart: false,
+        autohide: true,
+      });
+      content.removeClass("display");
+    } else {
+      content.addClass("display");
     }
-  );
-  $(".filter__form__custom-select-trigger").on("click", function () {
-    $("html").one("click", function () {
-      $(".filter__form__custom-select").removeClass("opened");
+    $(".js-accordion").vmenuModule({
+      Speed: 400,
+      autostart: false,
+      autohide: true,
     });
-    $(this).parents(".filter__form__custom-select").toggleClass("opened");
-    event.stopPropagation();
-  });
-  $(".filter__form__custom-option").on("click", function () {
-    $(this)
-      .parents(".filter__form__custom-select-wrapper")
-      .find("select")
-      .val($(this).data("value"));
-    $(this)
-      .parents(".filter__form__custom-options")
-      .find(".filter__form__custom-option")
-      .removeClass("selection");
-    $(this).addClass("selection");
-    $(this).parents(".filter__form__custom-select").removeClass("opened");
-    $(this)
-      .parents(".filter__form__custom-select")
-      .find(".filter__form__custom-select-trigger")
-      .text($(this).text());
-  });
+  }
+  accordion();
 
   function carouselCreated(e, data) {
     var z = {

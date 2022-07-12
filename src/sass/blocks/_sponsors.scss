@@ -138,20 +138,6 @@
     line-height: 25px;
     color: #d18e48;
 
-    + h4 {
-      margin: 0;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 30px;
-      color: #000000;
-      font-family: $m-font;
-
-      @media (max-width: 767px) {
-        margin-top: 15px;
-        margin-bottom: 10px;
-      }
-    }
-
     @media ($tablet) {
       margin-bottom: 57px;
       font-size: 24px;
@@ -194,9 +180,5 @@
       font-size: 15px;
       line-height: 30px;
     }
-  }
-
-  a {
-    color: $s-color;
   }
 }

@@ -68,9 +68,7 @@
     }
     .menu__sublist {
       display: block;
-      min-width: max-content;
       padding-left: 30px;
-      padding-right: 30px;
       padding-bottom: 10px;
       z-index: 3;
 
@@ -81,7 +79,6 @@
     }
 
     .menu__sublink {
-      max-width: max-content;
       animation: fadeIn 0.3s ease-in-out 1 forwards;
     }
   }

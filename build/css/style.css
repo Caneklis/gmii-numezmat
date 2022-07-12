@@ -5464,11 +5464,7 @@ body.bvi-active {
 }
 .menu__item:hover .menu__sublist {
   display: block;
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
-  min-width: max-content;
   padding-left: 30px;
-  padding-right: 30px;
   padding-bottom: 10px;
   z-index: 3;
 }
@@ -5479,9 +5475,6 @@ body.bvi-active {
   }
 }
 .menu__item:hover .menu__sublink {
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
   -webkit-animation: fadeIn 0.3s ease-in-out 1 forwards;
           animation: fadeIn 0.3s ease-in-out 1 forwards;
 }
@@ -6043,6 +6036,8 @@ body.bvi-active {
     display: grid;
     -ms-grid-rows: ;
         grid-template: "container";
+    place-items: center;
+    place-content: center;
     overflow: hidden;
   }
   .main-page-news__photo > * {
@@ -6731,7 +6726,6 @@ body.bvi-active {
   position: relative;
   overflow: hidden;
   width: 100%;
-  margin-bottom: 30px;
   padding-top: 56.25%;
   /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
@@ -7296,10 +7290,16 @@ body.bvi-active {
 }
 @media (min-width: 960px) {
   .news-page__head-list {
-    -ms-grid-columns: (1fr)[4];
-    grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
     gap: 26px;
     margin-bottom: 80px;
+  }
+}
+@media (min-width: 1440px) {
+  .news-page__head-list {
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -7310,8 +7310,22 @@ body.bvi-active {
   color: #b65a23;
 }
 .news-page__head-list-item a {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 170px -webkit-max-content;
+  -ms-grid-rows: 170px max-content;
+  grid-template-rows: 170px -webkit-max-content;
+  grid-template-rows: 170px max-content;
   color: inherit;
   text-decoration: underline;
+}
+@media (min-width: 768px) {
+  .news-page__head-list-item a {
+    -ms-grid-rows: 270px -webkit-max-content;
+    -ms-grid-rows: 270px max-content;
+    grid-template-rows: 270px -webkit-max-content;
+    grid-template-rows: 270px max-content;
+  }
 }
 @media (min-width: 768px) {
   .news-page__head-list-item {
@@ -7326,8 +7340,10 @@ body.bvi-active {
 }
 .news-page__head-list-item img {
   display: block;
-  max-width: 100%;
-  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+  max-height: 260px;
 }
 
 @media (min-width: 960px) {
@@ -7369,6 +7385,21 @@ body.bvi-active {
   .news-page__news-list {
     order: 3;
   }
+}
+.news-page__news-list .btn__show-more {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  color: #fff;
+  background: #e7a45e;
+  border-radius: 3px;
+  padding: 10px 20px;
 }
 
 @media (min-width: 768px) {
@@ -8449,20 +8480,6 @@ body.bvi-active {
   line-height: 25px;
   color: #d18e48;
 }
-.sponsors__logo h4 + h4 {
-  margin: 0;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 30px;
-  color: #000000;
-  font-family: "Montserrat", Arial, sans-serif;
-}
-@media (max-width: 767px) {
-  .sponsors__logo h4 + h4 {
-    margin-top: 15px;
-    margin-bottom: 10px;
-  }
-}
 @media (min-width: 768px) {
   .sponsors__logo h4 {
     margin-bottom: 57px;
@@ -8505,9 +8522,6 @@ body.bvi-active {
     font-size: 15px;
     line-height: 30px;
   }
-}
-.sponsors__text a {
-  color: #b65a23;
 }
 
 .glossary__wrapper {
@@ -8827,7 +8841,7 @@ body.bvi-active {
     display: grid;
     -ms-grid-columns: ([col] 1fr)[12];
     grid-template-columns: repeat(12, [col] 1fr);
-    gap: 20px;
+    grid-gap: 20px;
   }
 }
 
@@ -8877,7 +8891,7 @@ body.bvi-active {
     display: grid;
     -ms-grid-columns: ([col] 1fr)[12];
     grid-template-columns: repeat(12, [col] 1fr);
-    gap: 20px;
+    grid-gap: 20px;
     align-items: flex-start;
     margin-bottom: 98px;
   }
@@ -9061,7 +9075,7 @@ body.bvi-active {
     display: grid;
     -ms-grid-columns: ([col] 1fr)[12];
     grid-template-columns: repeat(12, [col] 1fr);
-    gap: 20px;
+    grid-gap: 20px;
     align-items: flex-start;
   }
 }
@@ -9112,7 +9126,7 @@ body.bvi-active {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  grid-gap: 20px;
 }
 @media (min-width: 768px) {
   .collections__head-list {
@@ -9149,7 +9163,7 @@ body.bvi-active {
   .collections__filter-results-item {
     -ms-grid-columns: ([col] 1fr)[12];
     grid-template-columns: repeat(12, [col] 1fr);
-    gap: 20px;
+    grid-gap: 20px;
     padding: 60px 0;
   }
 }
@@ -9314,7 +9328,7 @@ body.bvi-active {
     display: grid;
     -ms-grid-columns: ([col] 1fr)[12];
     grid-template-columns: repeat(12, [col] 1fr);
-    gap: 20px;
+    grid-gap: 20px;
     align-items: flex-start;
   }
 }
@@ -9352,6 +9366,9 @@ body.bvi-active {
   .department__person-links {
     padding-top: 30px;
   }
+}
+.department__person-links a {
+  color: #b65a23;
 }
 
 .department__person-slider {
@@ -9440,7 +9457,11 @@ body.bvi-active {
   width: auto;
 }
 
-.department__person-text h2 {
+.department__person-text h2,
+.department__person-text h3,
+.department__person-text h4,
+.department__person-text h5,
+.department__person-text h6 {
   margin: 0;
   margin-bottom: 40px;
   font-family: "yesevaone", Georgia, serif;
@@ -9451,7 +9472,11 @@ body.bvi-active {
   color: #937b65;
 }
 @media (max-width: 1023px) {
-  .department__person-text h2 {
+  .department__person-text h2,
+.department__person-text h3,
+.department__person-text h4,
+.department__person-text h5,
+.department__person-text h6 {
     margin-bottom: 25px;
     font-size: 22px;
     line-height: 25px;
@@ -9499,8 +9524,14 @@ body.bvi-active {
     line-height: 24px;
   }
 }
+.department__person-text a {
+  color: #b65a23;
+}
 
-.department__person-links h4 {
+.department__person-links h2,
+.department__person-links h3,
+.department__person-links h4,
+.department__person-links h5 {
   margin: 0;
   margin-bottom: 25px;
   font-family: "yesevaone", Georgia, serif;
@@ -9511,7 +9542,10 @@ body.bvi-active {
   color: #937b65;
 }
 @media (max-width: 1023px) {
-  .department__person-links h4 {
+  .department__person-links h2,
+.department__person-links h3,
+.department__person-links h4,
+.department__person-links h5 {
     font-size: 22px;
     line-height: 25px;
   }
@@ -9737,7 +9771,6 @@ body.bvi-active {
   margin-bottom: 25px;
   font-size: 15px;
   line-height: 30px;
-  /* or 200% */
   color: #000000;
 }
 .department__main-content-text a {
@@ -9912,7 +9945,7 @@ body.bvi-active {
     display: grid;
     -ms-grid-columns: 102px ([col] 1fr)[11];
     grid-template-columns: 102px repeat(11, [col] 1fr);
-    gap: 20px;
+    grid-gap: 20px;
     margin-bottom: 72px;
   }
 }
@@ -10403,4 +10436,108 @@ body .bvi-body[data-bvi-fontsize="16"] .filter__item-btn {
   padding: 10px;
   font-size: 22px;
   border-width: 2px;
+}
+
+.typical-accordion .accordion-control {
+  padding: 10px 0;
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  /*line-height: 202%;*/
+  line-height: 1.4;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: #937b65;
+  border: none;
+}
+
+.typical-accordion .accordion-control span {
+  display: inline;
+  border-bottom: 1px solid transparent;
+}
+
+.typical-accordion .accordion-control--second-level {
+  font-size: 19px;
+  font-size: 1.1875rem;
+  font-weight: 500;
+  line-height: 147%;
+  transition: all 0.2s ease;
+  background-color: transparent;
+  border: none;
+  color: #515151;
+}
+
+.typical-accordion .accordion-control--third-level {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 150%;
+  transition: all 0.2s ease;
+  color: #515151;
+}
+
+.typical-accordion .accordion-control--fourth-level {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 150%;
+  transition: all 0.2s ease;
+  color: #515151;
+}
+
+.typical-accordion .accordion-control--third-level:hover {
+  color: #515151;
+}
+
+.typical-accordion .accordion-control--fourth-level:hover {
+  color: #515151;
+}
+
+.typical-accordion .accordion.open > .accordion-control,
+.typical-accordion .accordion.open > .accordion-control--second-level {
+  color: #515151;
+}
+
+.typical-accordion .accordion-control--second-level:hover {
+  transition: all 0.2s ease;
+  color: #515151;
+}
+
+.typical-accordion button {
+  text-align: left;
+}
+
+.u-vmenu ul {
+  padding-left: 0;
+}
+
+.u-vmenu ul ul {
+  display: none;
+  list-style: none;
+  padding-left: 30px;
+}
+
+.u-vmenu ul ul ul {
+  display: none;
+  padding-top: 0.3rem;
+}
+
+.u-vmenu ul li button[data-option=on] {
+  color: #515151;
+}
+
+.accordion__text {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 150%;
+  padding: 0.5rem 0;
+}
+
+.accordion__padding {
+  padding-top: 17px;
+  padding-bottom: 22px;
 }
